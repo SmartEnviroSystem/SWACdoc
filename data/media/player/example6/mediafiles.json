@@ -42,7 +42,8 @@
             "desc": "Background effect",
             "path": "../../../data/media/player/example6/Under My Thumb.mp3",
             "mimetype": "audio/mp3",
-            "startonkey": "y"
+            "startonkey": "y",
+            "volume": 75
         },
         {
             "id": 22,
