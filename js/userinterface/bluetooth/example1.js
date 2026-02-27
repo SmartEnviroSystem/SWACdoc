@@ -36,19 +36,12 @@
  *   icon:        string,  // emoji displayed on the button
  *   label:       string,  // short button name
  *   description: string,  // subtitle shown below the label
- *   action:      string,  // method name on the Bluetooth instance; receives (deviceId)
+ *   action:      string,  // Pi command string sent directly (e.g. 'smartMobile_on_measuring')
+ *                         // Special: use param: '__method__' to invoke a named Bluetooth method
+ *                         //          (only needed for sendTimeStamp and getMacAddress)
+ *   param?:      any,     // optional payload forwarded as content.param (default: null)
  *   style?:      string   // optional CSS modifier: 'warn' (orange) | 'danger' (red)
  * }
- *
- * ── Available built-in actions (defined in Bluetooth.js) ─────────────────────
- *   sendTimeStamp, getMacAddress, startMeasurement, stopMeasurement,
- *   getLastMeasuring, measuringStatus, smartMobileStatus,
- *   aggregationOn, aggregationOff, aggregationStatus,
- *   synchronizeDataOn, synchronizeDataOff, synchronizeDataStatus,
- *   stopAll, rebootPi, shutDownPi
- *
- * Custom actions can be added by extending the Bluetooth class or by attaching
- * additional methods to the instance inside the onConnected callback.
  */
 window["bluetooth_example1_conf_options"] = {
 
@@ -74,19 +67,21 @@ window["bluetooth_example1_conf_options"] = {
                     icon: '🕐',
                     label: 'Timestamp',
                     description: 'Send current time to Pi',
-                    action: 'sendTimeStamp'
+                    action: 'sendTimeStamp',
+                    param: '__method__'   // invokes named method — builds timestamp object
                 },
                 {
                     icon: '📡',
                     label: 'MAC Address',
                     description: 'Read MAC address from Pi',
-                    action: 'getMacAddress'
+                    action: 'getMacAddress',
+                    param: '__method__'   // invokes named method — unwraps response envelope
                 },
                 {
                     icon: 'ℹ️',
                     label: 'Device Status',
                     description: 'Query general device status',
-                    action: 'smartMobileStatus'
+                    action: 'smartMobile_status'
                 }
             ]
         },
@@ -97,26 +92,26 @@ window["bluetooth_example1_conf_options"] = {
                     icon: '▶️',
                     label: 'Start',
                     description: 'Start sensor measurement',
-                    action: 'startMeasurement'
+                    action: 'smartMobile_on_measuring'
                 },
                 {
                     icon: '⏹️',
                     label: 'Stop',
                     description: 'Stop sensor measurement',
-                    action: 'stopMeasurement',
+                    action: 'smartMobile_off_measuring',
                     style: 'warn'
                 },
                 {
                     icon: 'ℹ️',
                     label: 'Meas. Status',
                     description: 'Query current measurement state',
-                    action: 'measuringStatus'
+                    action: 'smartMobile_measuring_status'
                 },
                 {
                     icon: '📊',
                     label: 'Last Data',
                     description: 'Fetch last recorded measurement',
-                    action: 'getLastMeasuring'
+                    action: 'last_measuring'
                 }
             ]
         },
@@ -127,20 +122,20 @@ window["bluetooth_example1_conf_options"] = {
                     icon: '🗃️',
                     label: 'Aggr. ON',
                     description: 'Start data aggregation',
-                    action: 'aggregationOn'
+                    action: 'smartMobile_on_aggregation'
                 },
                 {
                     icon: '🚫',
                     label: 'Aggr. OFF',
                     description: 'Stop data aggregation',
-                    action: 'aggregationOff',
+                    action: 'smartMobile_off_aggregation',
                     style: 'warn'
                 },
                 {
                     icon: 'ℹ️',
                     label: 'Aggr. Status',
                     description: 'Query aggregation state',
-                    action: 'aggregationStatus'
+                    action: 'smartMobile_aggregation_status'
                 }
             ]
         },
@@ -151,20 +146,20 @@ window["bluetooth_example1_conf_options"] = {
                     icon: '☁️',
                     label: 'Sync ON',
                     description: 'Start data synchronisation',
-                    action: 'synchronizeDataOn'
+                    action: 'smartMobile_on_synchronisation'
                 },
                 {
                     icon: '🚫',
                     label: 'Sync OFF',
                     description: 'Stop data synchronisation',
-                    action: 'synchronizeDataOff',
+                    action: 'smartMobile_off_synchronisation',
                     style: 'warn'
                 },
                 {
                     icon: 'ℹ️',
                     label: 'Sync Status',
                     description: 'Query synchronisation state',
-                    action: 'synchronizeDataStatus'
+                    action: 'smartMobile_synchronisation_status'
                 }
             ]
         },
@@ -188,21 +183,21 @@ window["bluetooth_example1_conf_options"] = {
                     icon: '🛑',
                     label: 'Stop All',
                     description: 'Stop all running jobs',
-                    action: 'stopAll',
+                    action: 'smartMobile_stop_all',
                     style: 'danger'
                 },
                 {
                     icon: '🔁',
                     label: 'Reboot',
                     description: 'Reboot the Pi',
-                    action: 'rebootPi',
+                    action: 'reboot',
                     style: 'danger'
                 },
                 {
                     icon: '📴',
                     label: 'Shutdown',
                     description: 'Shut down the Pi',
-                    action: 'shutDownPi',
+                    action: 'shutdown',
                     style: 'danger'
                 }
             ]
