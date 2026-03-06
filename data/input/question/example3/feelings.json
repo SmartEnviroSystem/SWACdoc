@@ -1,0 +1,13 @@
+[
+    {
+        "id": 1,
+        "attr": "feeling",
+        "name": "Your feeling",
+        "question": "How do you feel?",
+        "type": "icon",
+        "multiple": false,
+        "options_datarequest": "ref://../../../data/input/question/example3/options.json",
+        "required": true,
+        "target": "ref://../../../data/input/question/example3/savetarget.json"
+    }
+]
