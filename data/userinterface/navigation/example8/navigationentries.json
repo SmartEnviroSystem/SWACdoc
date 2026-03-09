@@ -1,0 +1,7 @@
+[
+{"id": 1, "rfrom": "*", "rto": "concepts/1_quickstart.html", "frame": "iframe_a", "name": "1", "icon": "/SWAC/swac/components/Icon/imgs/time/spring.png"},
+{"id": 2, "rfrom": "*", "rto": "concepts/2_components.html", "frame": "iframe_b", "name": "2", "icon": "/SWAC/swac/components/Icon/imgs/time/summer.png"},
+{"id": 3, "rfrom": "*", "rto": "concepts/3_data.html", "frame": "iframe_a", "name": "3", "icon": "/SWAC/swac/components/Icon/imgs/time/autumn.png"},
+{"id": 4, "rfrom": "*", "rto": "concepts/4_view.html", "frame": "iframe_b", "name": "4", "icon": "/SWAC/swac/components/Icon/imgs/data/database_star.svg"},
+{"id": 5, "rfrom": "*", "rto": "concepts/5_nested.html", "frame": "iframe_a", "name": "5", "icon": "/SWAC/swac/components/Icon/imgs/map/map_checked.svg"}
+]
