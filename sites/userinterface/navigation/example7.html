@@ -20,12 +20,16 @@
         <article>
             <h3>Example 7: Bottom Navigation with Icons</h3>
             <p>This example demonstrates a bottom navigation with icons, optimized for quick access on mobile devices. Navigation items are displayed as icon buttons fixed at the bottom of the screen.</p>
-            
-            <pre><code class="lang-html">
-&lt;div id="nav_example7" style="height: 100%" swa="Navigation FROM ../../../data/userinterface/navigation/example5/example5.json TEMPLATE nav_icons_at_bottom"&gt;&lt;/div&gt;
-        </code></pre>
 
-            <div id="nav_example7" style="height: 100%" swa="Navigation FROM ../../../data/userinterface/navigation/example5/example5.json TEMPLATE nav_icons_at_bottom"></div>
+            <pre><code class="lang-html">
+&lt;footer class="uk-tile-secondary uk-padding-small" style="position: fixed; bottom: 0px; width:100%"&gt;
+    &lt;div id="nav_example7" style="height: 100%" swa="Navigation FROM ../../../data/userinterface/navigation/example5/example5.json TEMPLATE nav_icons"&gt;&lt;/div&gt;
+&lt;/footer&gt;   
+</code></pre>
+
+            <footer class="uk-tile-secondary uk-padding-small" style="position: fixed; bottom: 0px; width:100%">
+                <div id="nav_example7" style="height: 100%" swa="Navigation FROM ../../../data/userinterface/navigation/example5/example5.json TEMPLATE nav_icons"></div>
+            </footer>
 
             <fieldset>
                 <legend>DATASOURCE</legend>
