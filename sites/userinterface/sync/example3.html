@@ -13,27 +13,32 @@
         <script src="/SWAC/swac/libs/uikit/js/uikit-icons.min.js"></script>
         <script src="/SWAC/swac/swac.js" type="module"></script>
 
-        <script src="../../../js/userinterface/sync/index.js"></script>
+        <script src="../../../js/userinterface/sync/example3.js"></script>
     </head>
     <body>
         <header id="head_navigation" swa="Navigation FROM routes.json"></header>
 
         <article>
-            <div id="explaincomponent" swa="ExplainComponents"></div>
-
-            <h2>Examples</h2>
-
-            <h3>Example 1: Simple syncronisation</h3>
-            <p>Syncronise data over frontend from one datasource to another.</p>
-            <a href="example1.html" target="_blank">See working example</a>
-            
-            <h3>Example 2: Sync with data transformation</h3>
-            <p>Before sync data can be transformed by a custom function.</p>
-            <a href="example2.html" target="_blank">See working example</a>
-            
             <h3>Example 3: Backend controlled synchronisation</h3>
             <p>Sync component can also be used to display state of synchronisation, that is lead by a backend.</p>
-            <a href="example3.html" target="_blank">See working example</a>
+            
+            <div id="sync_example3" swa="Sync FROM ../../../data/userinterface/sync/example3/exampledata_biglist.json"></div>
+
+            <fieldset>
+                <legend>VIEW-Requestor</legend>
+                <pre><code class="lang-html">
+&lt;div id="sync_example3" swa="Sync FROM ../../../data/userinterface/sync/example3/exampledata_biglist.json"&gt;&lt;/div&gt;
+        </code></pre>
+            </fieldset>
+            <fieldset>
+                <legend>CONFIGURATION</legend>
+                <div id="sync_example3_config" swa="Coder FROM ../../../js/userinterface/sync/example3.js"></div>
+            </fieldset>
+            <fieldset>
+                <legend>DATASOURCE</legend>
+                <p>This example uses a modified datasource from example 1.</p>
+                <div id="sync_example2_datasource" swa="Coder FROM ../../../data/userinterface/sync/example3/exampledata_biglist.json"></div>
+            </fieldset>
         </article>
         <footer>
             <a href="../../about/privacy.html">Privacy policy / Datenschutzerklärung</a>
