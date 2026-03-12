@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>SWAC - upload component - Example 2: Upload area with additional input fields</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../files/icons/32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../files/icons/16x16.png">
+        <link rel="stylesheet" type="text/css" href="../../../css/global.css">
+        
+        <link rel="stylesheet" type="text/css" href="/SWAC/swac/libs/uikit/css/uikit.min.css">
+        <script src="/SWAC/swac/libs/uikit/js/uikit.min.js"></script>
+        <script src="/SWAC/swac/swac.js" type="module"></script>
+        <script src="../../../js/input/upload/example2.js"></script>
+    </head>
+    <body>
+        <header id="head_navigation" swa="Navigation FROM routes.json"></header>
+        <article>
+            <h3>Example 2: Upload area with additional input fields</h3>
+            <p>You can add data to the file upload by specifying other components in 
+                the upload components options.</p>
+            <div class="uk-margin">
+                <input id="example2_name" name="fullname" class="uk-input" type="text" required placeholder="Name">
+            </div>
+            <div class="uk-margin">
+                <input id="example2_email" name="email" class="uk-input" type="email" required placeholder="email">
+            </div>
+            <div class="uk-margin">
+                <textarea id="example2_message" name="message" class="uk-textarea" rows="5" placeholder="Message"></textarea>
+            </div>
+            <div id="example2_select" swa="Select FROM ../../../data/input/upload/example2/selectalongdata.json">
+                <select class="uk-select" name="{requestor.id}">
+                    <option value="">Select.noselection</option>
+                    <option value="{value}" name="{name}" class="swac_repeatForSet">{name}</option>
+                </select>
+            </div>
+            <div id="upload_example2" swa="Upload"></div>
+
+            
+            <fieldset>
+                <legend>VIEW-Requestor</legend>
+                <pre><code class="lang-html">
+            &lt;div id="upload_example2" swa="Upload"&gt;&lt;/div&gt;
+                    </code></pre>
+            </fieldset>
+            <fieldset>
+                <legend>CONFIGURATION</legend>
+                <div id="upload_example2_configuration" swa="Coder FROM ../../../js/input/upload/example2.js"></div>
+            </fieldset>
+            <fieldset>
+                <legend>DATASOURCE</legend>
+                <p>There is no data needed for this component.</p>
+            </fieldset>
+        </article>
+        <footer>
+            <a href="../../about/privacy.html">Privacy policy / Datenschutzerklärung</a>
+            <a href="../../about/imprint.html">Imprint / Impressum</a>
+            <a class="toplink" href="#">Top</a>
+        </footer>
+    </body>
+</html>
