@@ -35,7 +35,7 @@
 {"id": 64, "rfrom": "*", "rto": "input/selectdatetime/index.html", "name": "Select Datetime", "parent": 60},
 {"id": 65, "rfrom": "*", "rto": "input/search/index.html", "name": "Search", "parent": 60},
 {"id": 66, "rfrom": "*", "rto": "input/question/index.html", "name": "Question", "parent": 60},
-{"id": 67, "rfrom": "*", "rto": "input/upload.html", "name": "Upload", "parent": 60},
+{"id": 67, "rfrom": "*", "rto": "input/upload/index.html", "name": "Upload", "parent": 60},
 {"id": 68, "rfrom": "*", "rto": "input/comments/index.html", "name": "Comments", "parent": 60},
 {"id": 69, "rfrom": "*", "rto": "input/labeling/index.html", "name": "Labeling", "parent": 60},
 {"id": 70, "rfrom": "*", "rto": "input/jsonreader/index.html", "name": "JsonReader", "parent": 60},
