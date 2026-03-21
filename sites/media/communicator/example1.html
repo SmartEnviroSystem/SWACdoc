@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>SWAC - communicator component</title>
+        <title>SWAC - communicator component - Example 1: Simple video and audio communicator</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <link rel="icon" type="image/png" sizes="32x32" href="../../files/icons/32x32.png">
@@ -12,22 +12,27 @@
         <script src="/SWAC/swac/libs/uikit/js/uikit.min.js"></script>
         <script src="/SWAC/swac/libs/uikit/js/uikit-icons.min.js"></script>
         <script src="/SWAC/swac/swac.js" type="module"></script>
-
-        <script src="../../js/media/communicator.js"></script>
     </head>
     <body>
         <header id="head_navigation" swa="Navigation FROM routes.json"></header>
         <article>
-            <div id="explaincomponent" swa="ExplainComponents"></div>
-
-            <h3>Example 1: Simple video and audio communicator</h3>
+            <h1>Example 1: Simple video and audio communicator</h1>
             Activate your cams.
 
-            <pre><code class="lang-html">
-            &lt;div id="com_example1" swa="Communicator"&gt;&lt;/div&gt;
-        </code></pre>
-
-            <div id="com_example1" swa="Communicator"></div>
+            <div id="comunicator_example1" swa="Communicator"></div>
+            
+            <fieldset>
+                <legend>VIEW-Requestor</legend>
+                <div id="comunicator_example1_html" swa="Coder FROM #comunicator_example1"></div>
+            </fieldset>
+            <fieldset>
+                <legend>CONFIGURATION</legend>
+                <p>There is no configuration needed for this example.</p>
+            </fieldset>
+            <fieldset>
+                <legend>DATASOURCE</legend>
+                <p>There is no datasource needed for this example.</p>
+            </fieldset>
         </article>
         <footer>
             <a href="about/privacy.html">Privacy policy / Datenschutzerklärung</a>
