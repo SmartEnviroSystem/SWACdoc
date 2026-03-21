@@ -4,16 +4,16 @@
         <title>SWAC - mediaeditor component</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <link rel="icon" type="image/png" sizes="32x32" href="../../files/icons/32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="../../files/icons/16x16.png">
-        <link rel="stylesheet" type="text/css" href="../../css/global.css">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../files/icons/32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../files/icons/16x16.png">
+        <link rel="stylesheet" type="text/css" href="../../../css/global.css">
 
         <link rel="stylesheet" type="text/css" href="/SWAC/swac/libs/uikit/css/uikit.min.css">
         <script src="/SWAC/swac/libs/uikit/js/uikit.min.js"></script>
         <script src="/SWAC/swac/libs/uikit/js/uikit-icons.min.js"></script>
         <script src="/SWAC/swac/swac.js" type="module"></script>
         
-        <script src="../../js/media/editor.js"></script>
+        <script src="../../../js/media/editor/index.js"></script>
     </head>
     <body>
         <header id="head_navigation" swa="Navigation FROM routes.json"></header>
@@ -24,9 +24,20 @@
 
             <h3>Example 1: Default mediaeditor with three medias loaded</h3>
             <p>This editor has opend three media files. Two images and one video.</p>
-            <p>NOTE: In this example the update and delete examples will not work because there are only files in background, and usualy server does not implement update and delte on file sources.</p>
-
-            <div id="mediaeditor" swa="Mediaeditor FROM ../../data/media/player/mediafiles.json"></div>
+            <a href="example1.html" target="_blank">See working example</a>
+            
+            <h3>Example 2: Media analysis</h3>
+            <p>Run an analysis of media files and display the results.</p>
+            <a href="example2.html" target="_blank">See working example</a>
+            
+            <h3>Example 3: Media tagging</h3>
+            <p>Tag single elements in media and show existing labels.</p>
+            <a href="example3.html" target="_blank">See working example</a>
+            
+            <h3>Example 4: Add references</h3>
+            <p>Add references for elements in media to other media or other datasets.</p>
+            <a href="example4.html" target="_blank">See working example</a>
+            
         </article>
         <footer>
             <a href="../about/privacy.html">Privacy policy / Datenschutzerklärung</a>

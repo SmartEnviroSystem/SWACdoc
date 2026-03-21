@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>SWAC - mediaeditor component - Example 4: Add references</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../files/icons/32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../files/icons/16x16.png">
+        <link rel="stylesheet" type="text/css" href="../../../css/global.css">
+
+        <link rel="stylesheet" type="text/css" href="/SWAC/swac/libs/uikit/css/uikit.min.css">
+        <script src="/SWAC/swac/libs/uikit/js/uikit.min.js"></script>
+        <script src="/SWAC/swac/libs/uikit/js/uikit-icons.min.js"></script>
+        <script src="/SWAC/swac/swac.js" type="module"></script>
+        
+        <script src="../../../js/media/editor/example4.js"></script>
+    </head>
+    <body>
+        <header id="head_navigation" swa="Navigation FROM routes.json"></header>
+        <article>
+            <h1>Example 4: Add references</h1>
+            <p>Add references for elements in media to other media or other datasets.</p>
+            <b>Notice: This example is currently not working</b>
+            
+            <div id="mediaeditor_example4" swa="Mediaeditor FROM ../../../data/media/player/example1/mediafiles.json"></div>
+        
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <fieldset>
+                <legend>VIEW-Requestor</legend>
+                <div id="mediaeditor_example4_html" swa="Coder FROM #mediaeditor_example4"></div>
+            </fieldset>
+            <fieldset>
+                <legend>CONFIGURATION</legend>
+                <div id="mediaeditor_example4_conf" swa="Coder FROM ../../../js/media/editor/example4.js"></div>
+            </fieldset>
+            <fieldset>
+                <legend>DATASOURCE</legend>
+                <p>This example uses the same example datasource and files like mediaplayer example1.</p>
+                <div id="mediaeditor_example4_datasource" swa="Coder FROM ../../../data/media/player/example1/mediafiles.json"></div>
+            </fieldset>
+        </article>
+        <footer>
+            <a href="../about/privacy.html">Privacy policy / Datenschutzerklärung</a>
+            <a href="../about/imprint.html">Imprint / Impressum</a>
+            <a class="toplink" href="#">Top</a>
+        </footer>
+    </body>
+</html>

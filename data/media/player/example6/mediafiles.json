@@ -55,7 +55,8 @@
             "fadein": 30,
             "stoponkey": "a",
             "fadeout": 5,
-            "volume": 50
+            "volume": 50,
+            "effect": "robo"
         }
     ]
 }

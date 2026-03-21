@@ -3,7 +3,7 @@
         {
             "id": 1,
             "title": "Cat from SnapWire",
-            "path": "cat_snapwire.jpg",
+            "path": "../../../data/media/player/example1/cat_snapwire.jpg",
             "mimetype": "image/jpg"
         },
         {
@@ -15,13 +15,13 @@
         {
             "id": 3,
             "title": "Water from Polina Tankilevitch",
-            "path": "water_Polina_Tankilevitch.mp4",
+            "path": "../../../data/media/player/example1/water_Polina_Tankilevitch.mp4",
             "mimetype": "video/mp4"
         },
         {
             "id": 4,
             "title": "Put the needle down",
-            "path": "Put_the_Needle_Down.mp3",
+            "path": "../../../data/media/player/example1/Put_the_Needle_Down.mp3",
             "mimetype": "audio/mp3",
             "artist": "Benjamin Orth",
             "album": "ccMixter",
