@@ -1,7 +1,3 @@
-window['explaincomponent_options'] = {
-    componentName: 'Contentin'
-};
-
 window['contentin_example1_options'] = {
     sourcedefs: [
         {
