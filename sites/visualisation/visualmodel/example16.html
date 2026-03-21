@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>SWAC - visualmodel - Example 16: Data based coloring</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../files/icons/32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../files/icons/16x16.png">
+        <link rel="stylesheet" type="text/css" href="../../../css/global.css">
+
+        <link rel="stylesheet" type="text/css" href="/SWAC/swac/libs/uikit/css/uikit.min.css">
+        <script src="/SWAC/swac/libs/uikit/js/uikit.min.js"></script>
+        <script src="/SWAC/swac/libs/uikit/js/uikit-icons.min.js"></script>
+        <script src="/SWAC/swac/swac.js" type="module"></script>
+        
+        <script src="../../../js/visualisation/visualmodel/example16.js"></script>
+    </head>
+    <body>
+        <header id="head_navigation" swa="Navigation FROM routes.json"></header>
+        <article>
+            <h1>Example 16: Data based coloring</h1>
+            <p>When useing data with the Data-Plugin coloring can be done data based with use of the Datadescription component.</p>
+            <b>Notice: This example currently does not work</b>
+            
+            <div id="visualmodel_example16" swa="Visualmodel FROM visualisation/visualmodel/example15/modeldefinition.json"></div>
+            <div id="visualmodel_example16dd" swa="Datadescription FROM visualisation/visualmodel/example16/description_definition.json"></div>
+            
+            <fieldset>
+                <legend>VIEW-Requestor</legend>
+                <div id="visualmodel_example16_html" swa="Coder FROM #visualmodel_example16"></div>
+                <div id="visualmodel_example16dd_html" swa="Coder FROM #visualmodel_example16dd"></div>
+            </fieldset>
+            <fieldset>
+                <legend>CONFIGURATION</legend>
+                <div id="visualmodel_example16_conf" swa="Coder FROM ../../../js/visualisation/visualmodel/example16.js"></div>
+            </fieldset>
+            <fieldset>
+                <legend>DATASOURCE</legend>
+                <p>This example uses the same model data as example 16.</p>
+                <div id="visualmodel_example15_datasource" swa="Coder FROM ../../../data/visualisation/visualmodel/example15/modeldefinition.json"></div>
+                <p>Additionally the following datadescription definition is used:</p>
+                <div id="visualmodel_example16dd_datasource" swa="Coder FROM ../../../data/visualisation/visualmodel/example16/description_definition.json"></div>
+            
+            </fieldset>
+        </article>
+        <footer>
+            <a href="../../about/privacy.html">Privacy policy / Datenschutzerklärung</a>
+            <a href="../../about/imprint.html">Imprint / Impressum</a>
+            <a class="toplink" href="#">Top</a>
+        </footer>
+    </body>
+</html>

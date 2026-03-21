@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>SWAC - visualmodel - Example 2: Box styleing</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../files/icons/32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../files/icons/16x16.png">
+        <link rel="stylesheet" type="text/css" href="../../../css/global.css">
+
+        <link rel="stylesheet" type="text/css" href="/SWAC/swac/libs/uikit/css/uikit.min.css">
+        <script src="/SWAC/swac/libs/uikit/js/uikit.min.js"></script>
+        <script src="/SWAC/swac/libs/uikit/js/uikit-icons.min.js"></script>
+        <script src="/SWAC/swac/swac.js" type="module"></script>
+    </head>
+    <body>
+        <!--<header id="head_navigation" swa="Navigation FROM routes.json"></header>-->
+        <article>
+            <h1>Example Box styleing</h1>
+            <p>This example shows how to set box styleing useing dataset attributes.</p>
+
+            <div id="visualmodel_example2" swa="Visualmodel FROM visualisation/visualmodel/example2/modeldefinition.json"></div>
+
+            <fieldset>
+                <legend>VIEW-Requestor</legend>
+                <!--<div id="visualmodel_example2_html" swa="Coder FROM #visualmodel_example2"></div>-->
+            </fieldset>
+            <fieldset>
+                <legend>CONFIGURATION</legend>
+                <p>There is no configuration needed for this example.</p>
+            </fieldset>
+            <fieldset>
+                <legend>DATASOURCE</legend>
+                <table class="uk-table">
+                    <tr>
+                        <th>Attribute</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>name</td>
+                        <td>Name the visual element</td>
+                    </tr>
+                    <tr>
+                        <td>desc</td>
+                        <td>Visualisations description</td>
+                    </tr>
+                    <tr>
+                        <td>width</td>
+                        <td>Width of the box</td>
+                    </tr>
+                    <tr>
+                        <td>height</td>
+                        <td>Height of the box</td>
+                    </tr>
+                    <tr>
+                        <td>elem_margin</td>
+                        <td>Inner margin of elem.</td>
+                    </tr>
+                    <tr>
+                        <td>elem_fillcolor</td>
+                        <td>Color that is the visualisation filled with.</td>
+                    </tr>
+                    <tr>
+                        <td>elem_bordercolor</td>
+                        <td>Color of the visualisations border.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>elem_kind</td>
+                        <td>
+                            <table>
+                                <tr>
+                                    <th>name</th>
+                                    <th>description</th>
+                                </tr>
+                                <tr>
+                                    <td>rect</td>
+                                    <td>Default visualisation. Dimension attributes: width & height</td>
+                                </tr>
+                                <tr>
+                                    <td>circle</td>
+                                    <td>Circle visualisation. Dimension attributs: radius</td>
+                                </tr>
+                                <tr>
+                                    <td>ellipse</td>
+                                    <td>Ellipse visualisation. Dimension attributes: radiusX & radiusY</td>
+                                </tr>
+                                <tr>
+                                    <td>wedge</td>
+                                    <td>Wedge visualisation. Dimension attributes: radius & angle</td>
+                                </tr>
+                                <tr>
+                                    <td>star</td>
+                                    <td>Star visualisation. Dimension attributes: innerRadius & outerRadius & numPoints</td>
+                                </tr>
+                                <tr>
+                                    <td>ring</td>
+                                    <td>Ring visualisation. Dimension attributes: innerRadius & outerRadius</td>
+                                </tr>
+                                <tr>
+                                    <td>arc</td>
+                                    <td>Arc visualisation. Dimension attributes: innerRadius & outerRadius & angle</td>
+                                </tr>
+                                <tr>
+                                    <td>regularpolygon</td>
+                                    <td>Visualisation as regular polygon. Dimension attributes: radius & sides</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <div id="visualmodel_example2_datasource" swa="Coder FROM ../../../data/visualisation/visualmodel/example2/modeldefinition.json"></div>
+            </fieldset>
+        </article>
+        <footer>
+            <a href="../about/privacy.html">Privacy policy / Datenschutzerklärung</a>
+            <a href="../about/imprint.html">Imprint / Impressum</a>
+            <a class="toplink" href="#">Top</a>
+        </footer>
+    </body>
+</html>

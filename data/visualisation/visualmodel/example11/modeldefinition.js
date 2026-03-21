@@ -1,12 +1,12 @@
-var example2 = [
+var example11 = [
   {
     id: 1,
     name: 'A',
-    label1: 'B label 1',
     x: 200,
     y: 200,
     width: 50,
     height: 50,
+    elem_onclick: function() {alert("Click on A");}
   },
   {
     id: 2,
@@ -15,13 +15,13 @@ var example2 = [
     y: 100,
     width: 50,
     height: 50,
+    elem_onclick: function(evt) {alert("Click on B");}
   },
   {
     id: 3,
     name: 'C A-B',
-    type: 'con',
     part1: 1,
     part2: 2,
-    strokeWidth: 4,
-  },
-]
+    con_onclick: function(evt) {alert("Click on A");}
+  }
+];

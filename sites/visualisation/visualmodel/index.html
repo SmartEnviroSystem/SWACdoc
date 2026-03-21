@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>SWAC - visualmodel component</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../files/icons/32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../files/icons/16x16.png">
+        <link rel="stylesheet" type="text/css" href="../../../css/global.css">
+
+        <link rel="stylesheet" type="text/css" href="/SWAC/swac/libs/uikit/css/uikit.min.css">
+        <script src="/SWAC/swac/libs/uikit/js/uikit.min.js"></script>
+        <script src="/SWAC/swac/libs/uikit/js/uikit-icons.min.js"></script>
+        <script src="/SWAC/swac/swac.js" type="module"></script>
+
+        <script src="../../../js/visualisation/visualmodel/index.js"></script>
+    </head>
+    <body>
+        <header id="head_navigation" swa="Navigation FROM routes.json"></header>
+        <article>
+            <div id="explaincomponent" swa="ExplainComponents"></div>
+
+            <h3>Example 1: Visual model with connections</h3>
+            <p>This example shows how to create a visualisation of datasets.</p>
+            <a href="example1.html" target="_blank">See working example</a>
+
+            <h3>Example 2: Box styleing</h3>
+            <p>This example shows how to set box styleing useing dataset attributes.
+            </p>
+            <a href="example2.html" target="_blank">See working example</a>
+
+            <h3>Example 3: Connection line styleing</h3>
+            <p>This example shows how to set connection line styleing useing dataset attributes.
+            </p>
+            <a href="example3.html" target="_blank">See working example</a>
+
+            <h3>Example 4: Label styleing</h3>
+            <p>The labels near an element can be styled in font and color.</p>
+
+            <a href="example4.html" target="_blank">See working example</a>
+
+            <h3>Example 5: Rotate elements</h3>
+            <p>Elements can be rotated on x-axis or z-axis depending on the values 
+                of the elements dataset. Furthermore the rotation can be depend on 
+                the relation to their parent element.
+                <br>z-axis rotation shortens the height appeareance or results in a x-axis flip</p>
+
+            <a href="example5.html" target="_blank">See working example</a>
+
+
+            <h3>Example 6: Visual model of photovoltaik plant with orthographic photo</h3>
+            <p>This example shows a more complex visual model. A photovoltaik plant is visualised
+                with use of a orthographic photo as background.</p>
+
+            <a href="example6.html" target="_blank">See working example</a>
+
+            <h3>Example 7: Visual model with helper lines</h3>
+            <p>The HelperLines plugin allows you to show helper lines for placement.</p>
+
+            <a href="example7.html" target="_blank">See working example</a>
+
+            <h3>Example 8: Show SceneGraph</h3>
+            <p>You can show a SceneGraph along the visualisation.</p>
+
+            <a href="example8.html" target="_blank">See working example</a>
+
+            <h3>Example 9: Show datasets metadata</h3>
+            <p>Visualised sets can contain much more data than used for display. This data can be shown.</p>
+            <a href="example9.html" target="_blank">See working example</a>
+
+            <h3>Example 10: Edit datasets</h3>
+            <p>Datasets can be edited useing the Propertieseditor plugin.</p>
+            <a href="example10.html" target="_blank">See working example</a>
+
+            <h3>Example 11: Custom onClick actions</h3>
+            <p>It is simple to add functions for clicks on visual elements.
+            </p>
+            <a href="example11.html" target="_blank">See working example</a>
+
+            <h3>Example 12: Adding a legend</h3>
+            <p>You can add a legend to the visualmodel, so that you can explain abbrevations
+                used in the model.</p>
+
+            <a href="example12.html" target="_blank">See working example</a>
+
+            <h3>Example 13: Configure stage behaviour</h3>
+            <p>There are some options to control the stage behaviour, as height,
+                drag control and more.</p>
+
+            <a href="example13.html" target="_blank">See working example</a>
+
+            <h3>Example 14: Automatic draw hirarchy</h3>
+            <p>With the hirarchy plugin, hirarchy structrue can be drawn automatically.</p>
+
+            <a href="example14.html" target="_blank">See working example</a>
+
+            <h3>Example 15: Display data in visualmodel</h3>
+            <p>You can visualise actual data in your visualmodel useing the data plugin.</p>
+
+            <a href="example15.html" target="_blank">See working example</a>
+
+            <h3>Example 16: Data based coloring</h3>
+            <p>When useing data with the Data-Plugin coloring can be done data based with use of the Datadescription component.</p>
+
+            <a href="example16.html" target="_blank">See working example</a>
+
+            <h3>Example 17: Createing visual models with VisucreatorSPL</h3>
+            <p>By activateing the Visucreator Plugin you can add new elements 
+                to the drawing. Created objects are stored as datasets, so they 
+                can be saved afterwards by use of the View.save() function.
+            </p>
+            
+            <a href="example17.html" target="_blank">See working example</a>
+
+
+            <h2>Globaly available options useage</h2>
+            <p>The following examples show the use of globaly available options and their
+                effects to this component.</p>
+
+            <h3>Example A: Work with default default values</h3>
+            <p>As with any other component too, you can set default values for datasets.</p>
+
+            <a href="exampleA.html" target="_blank">See working example</a>
+
+            <h3>Example B: Work with attribute renames</h3>
+            <p>As with any other component too, you can rename your dataset attributes to match the components needs.</p>
+
+            <a href="exampleB.html" target="_blank">See working example</a>
+
+            <h3>Example C: Adding additional datasources</h3>
+            <p>Visualmodel can handle datasets from more than one datasource. 
+                Additional datasets can be added by the generall available SWAC 
+                component functions e.g. addSet(), addDataFromReference().</p>
+
+            <a href="exampleC.html" target="_blank">See working example</a>
+        </article>
+        <footer>
+            <a href="../about/privacy.html">Privacy policy / Datenschutzerklärung</a>
+            <a href="../about/imprint.html">Imprint / Impressum</a>
+            <a class="toplink" href="#">Top</a>
+        </footer>
+    </body>
+</html>

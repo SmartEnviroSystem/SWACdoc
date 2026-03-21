@@ -1,0 +1,105 @@
+[
+  {
+    "id": 1,
+    "name": "A",
+    "label": "B label 1",
+    "x_other": 200,
+    "y_other": 200
+  },
+  {
+    "id": 2,
+    "name": "B",
+    "x_other": 300,
+    "y_other": 100
+  },
+  {
+    "id": 3,
+    "name": "C",
+    "x_other": 300,
+    "y_other": 200
+  },
+  {
+    "id": 4,
+    "name": "D",
+    "x_other": 300,
+    "y_other": 300
+  },
+  {
+    "id": 5,
+    "name": "E",
+    "x_other": 200,
+    "y_other": 300
+  },
+  {
+    "id": 6,
+    "name": "F",
+    "x_other": 100,
+    "y_other": 300
+  },
+  {
+    "id": 7,
+    "name": "G",
+    "x_other": 100,
+    "y_other": 200
+  },
+  {
+    "id": 8,
+    "name": "H",
+    "x_other": 100,
+    "y_other": 100
+  },
+  {
+    "id": 9,
+    "name": "I",
+    "x_other": 200,
+    "y_other": 100
+  },
+  {
+    "id": 11,
+    "name": "C A-B",
+    "part1": 1,
+    "part2": 2
+  },
+  {
+    "id": 12,
+    "name": "C A-C",
+    "part1": 1,
+    "part2": 3
+  },
+  {
+    "id": 13,
+    "name": "C A-D",
+    "part1": 1,
+    "part2": 4
+  },
+  {
+    "id": 14,
+    "name": "C A-E",
+    "part1": 1,
+    "part2": 5
+  },
+  {
+    "id": 15,
+    "name": "C A-F",
+    "part1": 1,
+    "part2": 6
+  },
+  {
+    "id": 16,
+    "name": "C A-G",
+    "part1": 1,
+    "part2": 7
+  },
+  {
+    "id": 17,
+    "name": "C A-H",
+    "part1": 1,
+    "part2": 8
+  },
+  {
+    "id": 18,
+    "name": "C A-I",
+    "part1": 1,
+    "part2": 9
+  }
+]

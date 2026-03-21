@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>SWAC - visualmodel - Example 12: Adding a legend</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../files/icons/32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../files/icons/16x16.png">
+        <link rel="stylesheet" type="text/css" href="../../../css/global.css">
+
+        <link rel="stylesheet" type="text/css" href="/SWAC/swac/libs/uikit/css/uikit.min.css">
+        <script src="/SWAC/swac/libs/uikit/js/uikit.min.js"></script>
+        <script src="/SWAC/swac/libs/uikit/js/uikit-icons.min.js"></script>
+        <script src="/SWAC/swac/swac.js" type="module"></script>
+        
+        <script src="../../../js/visualisation/visualmodel/example12.js"></script>
+    </head>
+    <body>
+        <header id="head_navigation" swa="Navigation FROM routes.json"></header>
+        <article>
+            <h1>Example 12: Adding a legend</h1>
+            <p>You can add a legend to the visualmodel, so that you can explain abbrevations
+                used in the model.
+                <br>Its contents are shown on mousover the legend button.</p>
+
+            <div id="visualmodel_example12" swa="Visualmodel FROM visualisation/visualmodel/example12/modeldefinition.json"></div>
+
+            <fieldset>
+                <legend>VIEW-Requestor</legend>
+                <div id="visualmodel_example12_html" swa="Coder FROM #visualmodel_example12"></div>
+            </fieldset>
+            <fieldset>
+                <legend>CONFIGURATION</legend>
+                <div id="visualmodel_example12_conf" swa="Coder FROM ../../../js/visualisation/visualmodel/example12.js"></div>
+            </fieldset>
+            <fieldset>
+                <legend>DATASOURCE</legend>
+                <div id="visualmodel_example12_datasource" swa="Coder FROM ../../../data/visualisation/visualmodel/example12/modeldefinition.json"></div>
+            </fieldset>
+        </article>
+        <footer>
+            <a href="../about/privacy.html">Privacy policy / Datenschutzerklärung</a>
+            <a href="../about/imprint.html">Imprint / Impressum</a>
+            <a class="toplink" href="#">Top</a>
+        </footer>
+    </body>
+</html>

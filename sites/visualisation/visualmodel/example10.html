@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>SWAC - visualmodel - Example 9: Edit datasets</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../files/icons/32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../files/icons/16x16.png">
+        <link rel="stylesheet" type="text/css" href="../../../css/global.css">
+
+        <link rel="stylesheet" type="text/css" href="/SWAC/swac/libs/uikit/css/uikit.min.css">
+        <script src="/SWAC/swac/libs/uikit/js/uikit.min.js"></script>
+        <script src="/SWAC/swac/libs/uikit/js/uikit-icons.min.js"></script>
+        <script src="/SWAC/swac/swac.js" type="module"></script>
+        
+        <script src="../../../js/visualisation/visualmodel/example9.js"></script>
+    </head>
+    <body>
+        <header id="head_navigation" swa="Navigation FROM routes.json"></header>
+        <article>
+            <h1>Example 9: Edit datasets</h1>
+            <p>Visualised sets can contain much more data than used for display. This data can be shown.</p>
+            <b>Notice: This addition is currently in development</b>
+
+            <div id="visualmodel_example9" swa="Visualmodel FROM visualisation/visualmodel/example8/modeldefinition.json"></div>
+            
+            <fieldset>
+                <legend>VIEW-Requestor</legend>
+                <div id="visualmodel_example9_html" swa="Coder FROM #visualmodel_example9"></div>
+            </fieldset>
+            <fieldset>
+                <legend>CONFIGURATION</legend>
+                <div id="visualmodel_example9_conf" swa="Coder FROM ../../../js/visualisation/visualmodel/example9.js"></div>
+            </fieldset>
+            <fieldset>
+                <legend>DATASOURCE</legend>
+                <p>This example uses same data as example 8.</p>
+                <div id="visualmodel_example9_datasource" swa="Coder FROM ../../../data/visualisation/visualmodel/example8/modeldefinition.json"></div>
+            </fieldset>
+        </article>
+        <footer>
+            <a href="../../about/privacy.html">Privacy policy / Datenschutzerklärung</a>
+            <a href="../../about/imprint.html">Imprint / Impressum</a>
+            <a class="toplink" href="#">Top</a>
+        </footer>
+    </body>
+</html>
