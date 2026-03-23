@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>SWAC - calculate component</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../files/icons/32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../files/icons/16x16.png">
+        <link rel="stylesheet" type="text/css" href="../../../css/global.css">
+
+        <link rel="stylesheet" type="text/css" href="/SWAC/swac/libs/uikit/css/uikit.min.css">
+        <script src="/SWAC/swac/libs/uikit/js/uikit.min.js"></script>
+        <script src="/SWAC/swac/libs/uikit/js/uikit-icons.min.js"></script>
+        <script src="/SWAC/swac/swac.js" type="module"></script>
+        
+        <script src="../../../js/visualisation/calculate/example1.js"></script>
+    </head>
+    <body>
+        <header id="head_navigation" swa="Navigation FROM routes.json"></header>
+        <article>
+            <h1>Example 1: Calculate values of a additional column</h1>
+            <p>This example demonstrates how to calculate an additional attribute 
+                based on two attributes contained in the datasets.</p>
+            
+            <div id="calculate_example1" swa="Calculate FROM visualisation/calculate/example1/uicurve_ohnep.json"></div>
+            
+            <fieldset>
+                <legend>VIEW-Requestor</legend>
+                <div id="calculate_example1_html" swa="Coder FROM #calculate_example1"></div>
+            </fieldset>
+            <fieldset>
+                <legend>CONFIGURATION</legend>
+                <div id="calculate_example1_conf" swa="Coder FROM ../../../js/visualisation/calculate/example1.js"></div>
+            </fieldset>
+            <fieldset>
+                <legend>DATASOURCE</legend>
+                <div id="calculate_example1_datasource" swa="Coder FROM ../../../data/visualisation/calculate/example1/uicurve_ohnep.json"></div>
+            </fieldset>
+        </article>
+        <footer>
+            <a href="../../../about/privacy.html">Privacy policy / Datenschutzerklärung</a>
+            <a href="../../../about/imprint.html">Imprint / Impressum</a>
+            <a class="toplink" href="#">Top</a>
+        </footer>
+    </body>
+</html>

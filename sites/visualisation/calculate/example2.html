@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>SWAC - calculate component - Example 2: Calculate sum from a list of sources</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../files/icons/32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../files/icons/16x16.png">
+        <link rel="stylesheet" type="text/css" href="../../../css/global.css">
+
+        <link rel="stylesheet" type="text/css" href="/SWAC/swac/libs/uikit/css/uikit.min.css">
+        <script src="/SWAC/swac/libs/uikit/js/uikit.min.js"></script>
+        <script src="/SWAC/swac/libs/uikit/js/uikit-icons.min.js"></script>
+        <script src="/SWAC/swac/swac.js" type="module"></script>
+        
+        <script src="../../../js/visualisation/calculate/example2.js"></script>
+    </head>
+    <body>
+        <header id="head_navigation" swa="Navigation FROM routes.json"></header>
+        <article>
+            <h1>Example 2: Calculate sum from a list of sources</h1>
+            <p>Calculates the sum of attributes from sources. This example uses the sumonly template to show only the sum.
+                <br>Note: The sources must be available under http://localhost</p>
+            Note: This example will only work, if the URLs in the "source" attribute are reachable for you.
+        <div id="calculate_example2" swa="Calculate FROM visualisation/calculate/example2/fromsources.json TEMPLATE sumonly"></div>
+            
+            
+            
+            <fieldset>
+                <legend>VIEW-Requestor</legend>
+                <div id="calculate_example2_html" swa="Coder FROM #calculate_example2"></div>
+            </fieldset>
+            <fieldset>
+                <legend>CONFIGURATION</legend>
+                <div id="calculate_example2_conf" swa="Coder FROM ../../../js/visualisation/calculate/example2.js"></div>
+            </fieldset>
+            <fieldset>
+                <legend>DATASOURCE</legend>
+                <div id="calculate_example2_datasource" swa="Coder FROM ../../../data/visualisation/calculate/example2/fromsources.json"></div>
+            </fieldset>            
+        </article>
+        <footer>
+            <a href="../../../about/privacy.html">Privacy policy / Datenschutzerklärung</a>
+            <a href="../../../about/imprint.html">Imprint / Impressum</a>
+            <a class="toplink" href="#">Top</a>
+        </footer>
+    </body>
+</html>
