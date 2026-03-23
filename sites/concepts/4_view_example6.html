@@ -16,50 +16,17 @@
         <header id="head_navigation" swa="Navigation FROM routes.json"></header>
 
         <article class="uk-article">
-            <a href="3_data.html">Back to data overview</a>
             <h1 class="uk-article-title">View Example 6: Inserting media files</h1>
             <p>Path to media files can be used the same way like other data attributes.
                 But to prevent uneccessery requests to the placeholder mark, place the 
                 url inside the data-src attribut instead of src. SWAC than lazy loads 
                 the media files.</p>
 
-            <fieldset>
-                <legend>VIEW-Requestor</legend>
-                <pre><code class="lang-html">
-&lt;div id="view_example6" swa="Present FROM ../../data/concepts/view_example6.json"&gt;
-    &lt;div class="swac_repeatForSet"&gt;
-        &lt;b&gt;Image&lt;/b&gt;
-        &lt;br&gt;&lt;picture&gt;
-            &lt;img data-src="{image}" height="200" width="200" alt="Image not loaded"&gt;
-        &lt;/picture&gt;
-        &lt;br&gt;&lt;b>Audio&lt;/b&gt;
-        &lt;br&gt;
-        &lt;audio controls&gt;
-            &lt;source data-src="{audio}" type="audio/mp3"&gt;
-        &lt;/audio&gt;
-        &lt;br&gt;&lt;b>Video&lt;/b&gt;
-        &lt;br&gt;
-        &lt;video controls&gt;
-            &lt;source data-src="{video}" type="video/mp4"&gt;
-        &lt;/video&gt;
-        &lt;/div&gt;
-&lt;/div&gt;  
-        </code></pre>
-            </fieldset>
-            <fieldset>
-                <legend>CONFIGURATION</legend>
-                <p swac_lang="no_configuraton_needed">No configuration needed</p>
-            </fieldset>
-            <fieldset>
-                <legend>DATASOURCE</legend>
-                <div id="view_example6_datasource" swa="Coder FROM ../../data/concepts/view_example6.json"></div>
-            </fieldset>
-
             <div id="view_example6" swa="Present FROM ../../data/concepts/view_example6.json">
                 <div class="swac_repeatForSet">
                     <b>Image</b>
                     <br><picture>
-                        <img data-src="{image}" uk-img height="200" width="200" alt="Image not loaded">
+                        <img data-src="{image}" height="200" width="200" alt="Image not loaded">
                     </picture>
                     <br><b>Audio</b>
                     <br><audio controls>
@@ -71,6 +38,19 @@
                     </video>
                 </div>
             </div>
+
+            <fieldset>
+                <legend>VIEW-Requestor</legend>
+                <div id="view_example6_html" swa="Coder FROM #view_example6"></div>
+            </fieldset>
+            <fieldset>
+                <legend>CONFIGURATION</legend>
+                <p swac_lang="no_configuraton_needed">No configuration needed</p>
+            </fieldset>
+            <fieldset>
+                <legend>DATASOURCE</legend>
+                <div id="view_example6_datasource" swa="Coder FROM ../../data/concepts/view_example6.json"></div>
+            </fieldset>
 
             <a href="3_data.html">Back to data overview</a>
         </article>
