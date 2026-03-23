@@ -1,6 +1,6 @@
 // Example 7: Create new datasets from definitions
 window['edit_example7_options'] = {
-    mainSource: 'observedobject/list',
+    fromName: 'observedobject/list',
     showWhenNoData: true,
     allowAdd: true,
     directOpenNew: true,

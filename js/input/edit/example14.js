@@ -1,7 +1,7 @@
 // Example 14: Create new datasets from definitions
 window['edit_example14_options'] = {
-    // the mainSource is the source where datasets should be stored when save is called
-    mainSource: 'airquality_a3',
+    // the fromName is the source where datasets should be stored when save is called
+    fromName: 'airquality_a3',
     showWhenNoData: true,
     allowAdd: true,
     directOpenNew: true,

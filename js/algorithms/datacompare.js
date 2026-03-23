@@ -1,6 +1,5 @@
 window['DataCompare_options'] = {
-    excludeCompareAttrs: ['id','parent'],
-    mainSource: '../../data/datacompare/datacompare_exampleA_A.json'
+    excludeCompareAttrs: ['id','parent']
 };
 
 //TODO add this eventlistener to documentation
