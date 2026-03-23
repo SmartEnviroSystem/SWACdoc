@@ -2,8 +2,8 @@
     {
         "id": 1,
         "name": "Dataset 1",
-        "image": "../../content/mediaexamples/example.jpg",
-        "audio": "../../content/mediaexamples/example.mp3",
-        "video": "../../content/mediaexamples/example.mp4"
+        "image": "../../data/media/player/example1/cat_snapwire.jpg",
+        "audio": "../../data/media/player/example1/Put_the_Needle_Down.mp3",
+        "video": "../../data/media/player/example1/water_Polina_Tankilevitch.mp4"
     }
 ]
