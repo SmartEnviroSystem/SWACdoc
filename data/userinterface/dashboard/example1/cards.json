@@ -1,0 +1,36 @@
+[
+    {
+        "id": 1,
+        "title": "Present Card - Default",
+        "desc": "Example for an card useing the Present component with default template.",
+        "avail": true,
+        "card_visible_default": true,
+        "data_comp": "Present",
+        "data_source": "userinterface/dashboard/example1/singledataset.json",
+        "ecomode": false
+    },
+    {
+        "id": 2,
+        "title": "Present Card - Template",
+        "desc": "Example for an card useing the Present component and other predefined template.",
+        "type": "",
+        "avail": true,
+        "card_visible_default": true,
+        "data_comp": "Present",
+        "data_comp_tpl": "table_for_all_datasets",
+        "data_source": "userinterface/dashboard/example1/singledataset.json",
+        "ecomode": false
+    },
+    {
+        "id": 3,
+        "title": "Present Card - Multiple Datasets",
+        "desc": "Cards can do anything the component can do. You can even use the components options and plugins.",
+        "avail": true,
+        "card_visible_default": true,
+        "data_comp": "Present",
+        "data_comp_tpl": "table_for_all_datasets",
+        "data_source": "userinterface/dashboard/example1/multipledatasets.json",
+        "data_comp_opts": "{plugins: new Map([['TableSort', { id: 'TableSort', active: true }]])}",
+        "ecomode": false
+    }
+]

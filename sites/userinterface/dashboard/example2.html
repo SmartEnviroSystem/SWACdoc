@@ -12,27 +12,37 @@
         <script src="/SWAC/swac/libs/uikit/js/uikit.min.js"></script>
         <script src="/SWAC/swac/libs/uikit/js/uikit-icons.min.js"></script>
         <script src="/SWAC/swac/swac.js" type="module"></script>
+
+        <script src="../../../js/userinterface/dashboard/example2.js"></script>
+        <script src="../../../data/userinterface/dashboard/example2/cards_exampledata.js"></script>
     </head>
     <body>
         <header id="head_navigation" swa="Navigation FROM routes.json"></header>
         <article>
             
-            <h3>Example 1: Simple dashboard</h3>
+            <h3>Example 2: Complex dashboard</h3>
             <p>Shows a dashboard with card components.</p>
 
-            <div id="dashboard_example1" swa="Dashboard FROM ../../../data/userinterface/dashboard/example1/cards.json"></div>
+            <div id="dashboard_example2" swa="Dashboard FROM ../../../data/userinterface/dashboard/example2/cards.json"></div>
+            
+            <p>Some of the above examples use components with coloring. Those is done by the Datadescription component. Following you see the legends:</p>
+            <div class="uk-grid">
+                <div id="thermometer_legend" swa="Datadescription FROM thermometer_legend_data"></div>
+                <div id="states_legend" swa="Datadescription FROM states_legend_data"></div>
+                <div id="progress_legend" swa="Datadescription FROM progress_legend_data"></div>
+            </div>
             
             <fieldset>
                 <legend>VIEW-Requestor</legend>
-                <div id="dashboard_example1_html" swa="Coder FROM #dashboard_example1"></div>
+                <div id="dashboard_example2_html" swa="Coder FROM #dashboard_example2"></div>
             </fieldset>
             <fieldset>
                 <legend>CONFIGURATION</legend>
-                <p>This example needs no configuration.</p>
+                <div id="dashboard_example2_conf" swa="Coder FROM ../../../js/userinterface/dashboard/example2.js"></div>
             </fieldset>
             <fieldset>
                 <legend>DATASOURCE</legend>
-                <div id="dashboard_example1_datasource" swa="Coder FROM ../../../data/userinterface/dashboard/example1/cards.json"></div>
+                <div id="dashboard_example2_datasource" swa="Coder FROM ../../../data/userinterface/dashboard/example2/cards.json"></div>
             </fieldset>
         </article>
         <footer>
