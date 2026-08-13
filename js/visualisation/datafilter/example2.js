@@ -10,5 +10,6 @@ window['Datafilterbar_datafilterbar_present_options'] = {
     excludeAttrs: ['id'],
     filterTarget: 'table',
     storeFilters: false,
-    enableMathlive: true
+    enableMathlive: false,
+    visibleSections: ['filters']
 };
