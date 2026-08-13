@@ -80,6 +80,14 @@
 {"id": 217, "rfrom": "*", "rto": "lowlevelapi/dynamiccomp.html", "name": "Dynamic component useage", "parent": 210},
 {"id": 218, "rfrom": "*", "rto": "lowlevelapi/translations.html", "name": "Translations", "parent": 210},
 
+{"id": 231, "rfrom": "*", "rto": "visualisation/dataaggregation/index.html", "name": "DataAggregation", "parent": 20},
+{"id": 232, "rfrom": "*", "rto": "lowlevelapi/datasourceadapter.html", "name": "DataSourceAdapter", "parent": 210},
+{"id": 233, "rfrom": "*", "rto": "input/externaldatasource/index.html", "name": "ExternalDataSource", "parent": 60},
+{"id": 234, "rfrom": "*", "rto": "userinterface/tableexport/index.html", "name": "TableExport", "parent": 80},
+{"id": 235, "rfrom": "*", "rto": "userinterface/texttransfer/index.html", "name": "TextTransfer", "parent": 80},
+{"id": 236, "rfrom": "*", "rto": "input/mathjsonformula/index.html", "name": "MathJSON and MathLive", "parent": 60},
+{"id": 237, "rfrom": "*", "rto": "lowlevelapi/aiadaptation.html", "name": "AIDataSourceAdapter", "parent": 210},
+
 {"id": 220, "rfrom": "*", "rto": "#", "name": "Deprecated Components:"},
 {"id": 221, "rfrom": "*", "rto": "jpars/Jpars.html", "name": "JPars", "parent": 220},
 {"id": 222, "rfrom": "*", "rto": "input/mapselect.html", "name": "Mapselect", "parent": 220}
