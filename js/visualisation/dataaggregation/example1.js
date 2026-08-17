@@ -1,4 +1,4 @@
-import DataAggregation from '/SWAC/swac/DataAggregation.js';
+import DataAggregation from '/SWAC/swac/DataAggregation.js?ver=17.08.2026.1';
 
 let response = await fetch('../../../data/visualisation/dataaggregation/example1/datasets.json');
 let sets = await response.json();

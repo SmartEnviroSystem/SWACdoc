@@ -11,18 +11,18 @@
         <script src="/SWAC/swac/libs/uikit/js/uikit.min.js"></script>
         <script src="/SWAC/swac/libs/uikit/js/uikit-icons.min.js"></script>
         <script src="/SWAC/swac/swac.js" type="module"></script>
-        <script src="../../../js/visualisation/dataaggregation/example1.js" type="module"></script>
+        <script src="../../../js/visualisation/dataaggregation/example1.js?ver=17.08.2026.1" type="module"></script>
     </head>
     <body>
         <header id="head_navigation" swa="Navigation FROM routes.json"></header>
         <article>
             <h1>Example 1: Filter and aggregate time series</h1>
-            <p>Select an interval and aggregate the example datasets.</p>
+            <p>The first three datasets are within one five minute interval. Numeric values are averaged and the most frequent text value is retained.</p>
 
             <div class="uk-grid-small uk-flex-middle" uk-grid>
                 <div class="uk-width-small">
                     <label class="uk-form-label" for="dataaggregation_example1_amount">Interval</label>
-                    <input id="dataaggregation_example1_amount" class="uk-input" type="number" min="1" value="30">
+                    <input id="dataaggregation_example1_amount" class="uk-input" type="number" min="1" value="5">
                 </div>
                 <div class="uk-width-small">
                     <label class="uk-form-label" for="dataaggregation_example1_unit">Unit</label>

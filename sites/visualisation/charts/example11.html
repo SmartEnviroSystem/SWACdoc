@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>SWAC - MathJSON and MathLive - Example 1: Convert a MathLive formula</title>
+        <title>SWAC - Charts - Example 11: Configure chart data series</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <link rel="icon" type="image/png" sizes="32x32" href="../../../files/icons/32x32.png">
@@ -11,34 +11,31 @@
         <script src="/SWAC/swac/libs/uikit/js/uikit.min.js"></script>
         <script src="/SWAC/swac/libs/uikit/js/uikit-icons.min.js"></script>
         <script src="/SWAC/swac/swac.js" type="module"></script>
-        <script src="../../../js/input/mathjsonformula/example1.js?ver=17.08.2026.1" type="module"></script>
+        <script src="../../../js/visualisation/charts/example11.js" type="module"></script>
     </head>
     <body>
         <header id="head_navigation" swa="Navigation FROM routes.json"></header>
         <article>
-            <h1>Example 1: Convert a MathLive formula</h1>
-            <p>Convert the formula 10 * 10 - 40 from MathLive into a dataset formula.</p>
+            <h3>Example 11: Configure chart data series</h3>
+            <p>Open the settings menu to select displayed data series, assign colors and set the x and y axes.</p>
 
-            <p id="mathjsonformula_example1_editor"></p>
-            <p><button id="mathjsonformula_example1_convert" class="uk-button uk-button-primary" type="button">Convert formula</button></p>
-            <pre id="mathjsonformula_example1" class="uk-padding-small uk-background-muted"></pre>
+            <div id="charts_example11" swa="Charts FROM ../../../data/visualisation/charts/example1.json"></div>
 
             <fieldset>
                 <legend>VIEW-Requestor</legend>
-                <pre><code class="lang-html">&lt;p id="mathjsonformula_example1_editor"&gt;&lt;/p&gt;
-&lt;pre id="mathjsonformula_example1"&gt;&lt;/pre&gt;</code></pre>
+                <pre><code class="lang-html">&lt;div id="charts_example11" swa="Charts FROM measurements"&gt;&lt;/div&gt;</code></pre>
             </fieldset>
             <fieldset>
                 <legend>CONFIGURATION</legend>
-                <div id="mathjsonformula_example1_configuration" swa="Coder FROM ../../../js/input/mathjsonformula/example1.js"></div>
+                <div id="charts_example11_configuration" swa="Coder FROM ../../../js/visualisation/charts/example11.js"></div>
             </fieldset>
             <fieldset>
                 <legend>DATASOURCE</legend>
-                <p>There is no data source needed for this example.</p>
+                <div id="charts_example11_datasource" swa="Coder FROM ../../../data/visualisation/charts/example1.json"></div>
             </fieldset>
         </article>
         <footer>
-            <a href="../../about/privacy.html">Privacy policy / Datenschutzerklärung</a>
+            <a href="../../about/privacy.html">Privacy policy / DatenschutzerklÃ¤rung</a>
             <a href="../../about/imprint.html">Imprint / Impressum</a>
             <a class="toplink" href="#">Top</a>
         </footer>
