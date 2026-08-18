@@ -1,8 +1,5 @@
 window['datafilterbar_present_options'] = {
-    plugins: new Map([['Datafilterbar', {
-                id: 'Datafilterbar',
-                active: true
-            }]])
+    guiFilter: true
 };
 
 window['Datafilterbar_datafilterbar_present_options'] = {
@@ -10,6 +7,5 @@ window['Datafilterbar_datafilterbar_present_options'] = {
     excludeAttrs: ['id'],
     filterTarget: 'table',
     storeFilters: false,
-    enableMathlive: false,
-    visibleSections: ['filters']
+    enableMathlive: false
 };
