@@ -1,0 +1,7 @@
+{
+    "station": "River north",
+    "readings": [
+        {"timestamp": "2026-08-01T10:00:00Z", "water": {"temperature": 18.4, "ph": 7.2}},
+        {"timestamp": "2026-08-01T10:05:00Z", "water": {"temperature": 18.8, "ph": 7.3}}
+    ]
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>SWAC > low level api > AIDataSourceAdapter</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../files/icons/32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../files/icons/16x16.png">
+        <link rel="stylesheet" type="text/css" href="../../css/global.css">
+
+        <link rel="stylesheet" type="text/css" href="/SWAC/swac/libs/uikit/css/uikit.min.css">
+        <script src="/SWAC/swac/libs/uikit/js/uikit.min.js"></script>
+        <script src="/SWAC/swac/libs/uikit/js/uikit-icons.min.js"></script>
+        <script src="/SWAC/swac/swac.js" type="module"></script>
+        <script src="../../js/lowlevelapi/aiadaptation.js" type="module"></script>
+    </head>
+    <body>
+        <header id="head_navigation" swa="Navigation FROM routes.json"></header>
+        <article>
+            <h1>AIDataSourceAdapter</h1>
+            <p>AIDataSourceAdapter creates normalized SWAC datasets from JSON data. It first uses deterministic adaptation and can use a configured service when deterministic adaptation is not sufficient.</p>
+
+            <h2>Adapt JSON data</h2>
+            <p>The following example uses deterministic adaptation. The result has the same structure as a service based adaptation and can therefore be used by Present, Charts and other SWAC components.</p>
+            <pre id="aiadaptation_result" class="uk-padding-small uk-background-muted"></pre>
+
+            <pre><code class="lang-javascript">import AIDataSourceAdapter from '/SWAC/swac/AIDataSourceAdapter.js';
+
+let result = await AIDataSourceAdapter.adaptCapsule({
+    data: sourceJson,
+    fromName: 'external_measurements'
+}, {mode: 'auto'});
+
+if (result.usable)
+    console.log(result.sets);
+else
+    console.warn(result.warnings);</code></pre>
+
+            <h2>Adaptation modes</h2>
+            <p>Use <code>deterministic</code> to disable service requests. Use <code>auto</code> to request the configured service only when the deterministic result needs improvement. Use <code>ai</code> to require service based adaptation.</p>
+
+            <h2>Service configuration</h2>
+            <p>Keep access keys on the server. The browser configuration only contains the address of a server side proxy.</p>
+            <pre><code class="lang-javascript">window.SWAC_AI_CONFIG = {
+    proxyEndpoint: '/api/ai/adapt',
+    model: 'configured-model'
+};</code></pre>
+            <p>The proxy receives the normalized request, retrieves its access key from protected configuration and forwards the request to the selected service.</p>
+
+            <h2>Example configuration</h2>
+            <div id="aiadaptation_configuration" swa="Coder FROM ../../js/lowlevelapi/aiadaptation.js"></div>
+        </article>
+        <footer>
+            <a href="../about/privacy.html">Privacy policy / Datenschutzerklärung</a>
+            <a href="../about/imprint.html">Imprint / Impressum</a>
+            <a class="toplink" href="#">Top</a>
+        </footer>
+    </body>
+</html>

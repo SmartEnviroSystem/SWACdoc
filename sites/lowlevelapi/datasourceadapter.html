@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>SWAC > low level api > DataSourceAdapter</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../files/icons/32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../files/icons/16x16.png">
+        <link rel="stylesheet" type="text/css" href="../../css/global.css">
+
+        <link rel="stylesheet" type="text/css" href="/SWAC/swac/libs/uikit/css/uikit.min.css">
+        <script src="/SWAC/swac/libs/uikit/js/uikit.min.js"></script>
+        <script src="/SWAC/swac/libs/uikit/js/uikit-icons.min.js"></script>
+        <script src="/SWAC/swac/swac.js" type="module"></script>
+        <script src="../../js/lowlevelapi/datasourceadapter.js" type="module"></script>
+    </head>
+    <body>
+        <header id="head_navigation" swa="Navigation FROM routes.json"></header>
+        <article>
+            <h1>DataSourceAdapter</h1>
+            <p>DataSourceAdapter finds measurement records in unknown JSON structures, flattens nested values and creates datasets that can be used by SWAC components.</p>
+
+            <h2>Adapt nested JSON data</h2>
+            <p>Edit the example JSON and run the adaptation. The result shows the detected record path, numeric attributes, time attribute and normalized datasets.</p>
+            <textarea id="datasourceadapter_source" class="uk-textarea" rows="12">{
+    "metadata": {"station": "River north"},
+    "measurements": [
+        {
+            "record": {
+                "time": "2026-08-01T10:00:00Z",
+                "values": {"temperature": "18.4", "ph": 7.2}
+            }
+        },
+        {
+            "record": {
+                "time": "2026-08-01T10:05:00Z",
+                "values": {"temperature": "18.8", "ph": 7.3}
+            }
+        }
+    ]
+}</textarea>
+            <p><button id="datasourceadapter_run" class="uk-button uk-button-primary" type="button">Adapt data</button></p>
+            <pre id="datasourceadapter_result" class="uk-padding-small uk-background-muted">Edit the JSON and adapt the data.</pre>
+
+            <h2>Use DataSourceAdapter</h2>
+            <pre><code class="lang-javascript">import DataSourceAdapter from '/SWAC/swac/DataSourceAdapter.js';
+
+let result = DataSourceAdapter.adaptCapsule({
+    data: sourceJson,
+    fromName: 'water_measurements'
+});
+
+if (result.usable)
+    console.log(result.sets);
+else
+    console.warn(result.reason);</code></pre>
+
+            <h2>Result structure</h2>
+            <p>The result contains <code>sets</code>, <code>rowPath</code>, <code>numericAttrs</code>, <code>dateAttrs</code>, <code>timeAttr</code>, attribute labels and warnings. The <code>usable</code> value indicates whether the source could be adapted.</p>
+
+            <h2>Example configuration</h2>
+            <div id="datasourceadapter_configuration" swa="Coder FROM ../../js/lowlevelapi/datasourceadapter.js"></div>
+        </article>
+        <footer>
+            <a href="../about/privacy.html">Privacy policy / Datenschutzerklärung</a>
+            <a href="../about/imprint.html">Imprint / Impressum</a>
+            <a class="toplink" href="#">Top</a>
+        </footer>
+    </body>
+</html>

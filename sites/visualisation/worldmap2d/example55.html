@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>SWAC - Worldmap2d component - Example 55: Route analytics</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../files/icons/32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../files/icons/16x16.png">
+        <link rel="stylesheet" type="text/css" href="../../../css/global.css">
+        <link rel="stylesheet" type="text/css" href="/SWAC/swac/libs/uikit/css/uikit.min.css">
+        <script src="/SWAC/swac/libs/uikit/js/uikit.min.js"></script>
+        <script src="/SWAC/swac/libs/uikit/js/uikit-icons.min.js"></script>
+        <script src="/SWAC/swac/swac.js" type="module"></script>
+        <script src="../../../js/visualisation/worldmap2d/example55.js"></script>
+    </head>
+    <body>
+        <header id="head_navigation" swa="Navigation FROM routes.json"></header>
+        <article>
+            <h3>Example 55: Route analytics</h3>
+            <p>RouteAnalytics groups geographic points by route attributes, visualizes the routes and creates a searchable route summary with health ratings.</p>
+
+            <div id="worldmap2d_example55" swa="Worldmap2d FROM ../../../data/visualisation/worldmap2d/example55.json"></div>
+            <div id="worldmap2d_example55_summary"></div>
+
+            <fieldset>
+                <legend>VIEW-Requestor</legend>
+                <pre><code class="lang-html">&lt;div id="worldmap2d_example55" swa="Worldmap2d FROM route_points.json"&gt;&lt;/div&gt;
+&lt;div id="worldmap2d_example55_summary"&gt;&lt;/div&gt;</code></pre>
+            </fieldset>
+            <fieldset>
+                <legend>CONFIGURATION</legend>
+                <div id="worldmap2d_example55_conf" swa="Coder FROM ../../../js/visualisation/worldmap2d/example55.js"></div>
+            </fieldset>
+            <fieldset>
+                <legend>DATASOURCE</legend>
+                <div id="worldmap2d_example55_datasource" swa="Coder FROM ../../../data/visualisation/worldmap2d/example55.json"></div>
+            </fieldset>
+        </article>
+        <footer>
+            <a href="../../about/privacy.html">Privacy policy / Datenschutzerklärung</a>
+            <a href="../../about/imprint.html">Imprint / Impressum</a>
+            <a class="toplink" href="#">Top</a>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>SWAC - DataAggregation - Example 1: Filter and aggregate time series</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../files/icons/32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../files/icons/16x16.png">
+        <link rel="stylesheet" type="text/css" href="../../../css/global.css">
+        <link rel="stylesheet" type="text/css" href="/SWAC/swac/libs/uikit/css/uikit.min.css">
+        <script src="/SWAC/swac/libs/uikit/js/uikit.min.js"></script>
+        <script src="/SWAC/swac/libs/uikit/js/uikit-icons.min.js"></script>
+        <script src="/SWAC/swac/swac.js" type="module"></script>
+        <script src="../../../js/visualisation/dataaggregation/example1.js?ver=17.08.2026.1" type="module"></script>
+    </head>
+    <body>
+        <header id="head_navigation" swa="Navigation FROM routes.json"></header>
+        <article>
+            <h1>Example 1: Filter and aggregate time series</h1>
+            <p>The first three datasets are within one five minute interval. Numeric values are averaged and the most frequent text value is retained.</p>
+
+            <div class="uk-grid-small uk-flex-middle" uk-grid>
+                <div class="uk-width-small">
+                    <label class="uk-form-label" for="dataaggregation_example1_amount">Interval</label>
+                    <input id="dataaggregation_example1_amount" class="uk-input" type="number" min="1" value="5">
+                </div>
+                <div class="uk-width-small">
+                    <label class="uk-form-label" for="dataaggregation_example1_unit">Unit</label>
+                    <select id="dataaggregation_example1_unit" class="uk-select">
+                        <option value="minutes">Minutes</option>
+                        <option value="hours">Hours</option>
+                    </select>
+                </div>
+                <div class="uk-width-auto uk-margin-top">
+                    <button id="dataaggregation_example1_run" class="uk-button uk-button-primary" type="button">Aggregate data</button>
+                </div>
+            </div>
+
+            <h3>Source data</h3>
+            <pre id="dataaggregation_example1_source" class="uk-padding-small uk-background-muted"></pre>
+            <h3>Aggregated data</h3>
+            <pre id="dataaggregation_example1_result" class="uk-padding-small uk-background-muted">Select an interval and aggregate the data.</pre>
+
+            <fieldset>
+                <legend>VIEW-Requestor</legend>
+                <pre><code class="lang-html">&lt;button id="dataaggregation_example1_run"&gt;Aggregate data&lt;/button&gt;
+&lt;pre id="dataaggregation_example1_result"&gt;&lt;/pre&gt;</code></pre>
+            </fieldset>
+            <fieldset>
+                <legend>CONFIGURATION</legend>
+                <div id="dataaggregation_example1_configuration" swa="Coder FROM ../../../js/visualisation/dataaggregation/example1.js"></div>
+            </fieldset>
+            <fieldset>
+                <legend>DATASOURCE</legend>
+                <div id="dataaggregation_example1_datasource" swa="Coder FROM ../../../data/visualisation/dataaggregation/example1/datasets.json"></div>
+            </fieldset>
+        </article>
+        <footer>
+            <a href="../../about/privacy.html">Privacy policy / Datenschutzerklärung</a>
+            <a href="../../about/imprint.html">Imprint / Impressum</a>
+            <a class="toplink" href="#">Top</a>
+        </footer>
+    </body>
+</html>

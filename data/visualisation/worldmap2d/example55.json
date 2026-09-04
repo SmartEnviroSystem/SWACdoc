@@ -1,0 +1,9 @@
+[
+    {"id": 1, "ts": "2026-08-01T10:00:00Z", "longitude": 8.9004, "latitude": 52.2941, "altitude": 49, "measurement_name": "Riverside", "measurement_process": "2026-08-01T10:00:00Z", "pm2_5": 8.4, "pm10_0": 15.2},
+    {"id": 2, "ts": "2026-08-01T10:04:00Z", "longitude": 8.9032, "latitude": 52.2958, "altitude": 51, "measurement_name": "Riverside", "measurement_process": "2026-08-01T10:00:00Z", "pm2_5": 9.1, "pm10_0": 16.7},
+    {"id": 3, "ts": "2026-08-01T10:08:00Z", "longitude": 8.9064, "latitude": 52.2972, "altitude": 52, "measurement_name": "Riverside", "measurement_process": "2026-08-01T10:00:00Z", "pm2_5": 8.7, "pm10_0": 14.9},
+    {"id": 4, "ts": "2026-08-01T11:00:00Z", "longitude": 8.9089, "latitude": 52.2926, "altitude": 48, "measurement_name": "City centre", "measurement_process": "2026-08-01T11:00:00Z", "pm2_5": 17.5, "pm10_0": 29.1},
+    {"id": 5, "ts": "2026-08-01T11:04:00Z", "longitude": 8.9116, "latitude": 52.2943, "altitude": 49, "measurement_name": "City centre", "measurement_process": "2026-08-01T11:00:00Z", "pm2_5": 19.8, "pm10_0": 34.4},
+    {"id": 6, "ts": "2026-08-01T11:08:00Z", "longitude": 8.9142, "latitude": 52.2961, "altitude": 50, "measurement_name": "City centre", "measurement_process": "2026-08-01T11:00:00Z", "pm2_5": 21.1, "pm10_0": 36.2},
+    {"id": 7, "ts": "2026-08-01T11:12:00Z", "longitude": 8.9058, "latitude": 52.2918, "altitude": 48, "measurement_name": null, "measurement_process": null, "pm2_5": 11.2, "pm10_0": 20.4}
+]
