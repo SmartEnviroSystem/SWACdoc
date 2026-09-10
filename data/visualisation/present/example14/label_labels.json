@@ -1,1 +1,259 @@
-{"records": [{"name":"Salzgehalt","description":"Klassifizierungen des Salzgehaltes","id":1},{"parent_id":1,"name":"Süßwasser","description":"See- oder Flusswasser mit unter 0,1% Salzgehalt","id":2},{"parent_id":1,"name":"Salzwasser","description":"See- oder Meerwasser mit einem Salzgehalt von mehr als 1 % (allgemein) bzw. 1,8% (angelsächsischen Raum)","id":3},{"parent_id":1,"name":"Brackwasser","description":"See- oder Meerwasser mit einem Salzgehalt von 0,1 % bis 1 %","id":4},{"parent_id":1,"name":"Salzwasser (Nordsee)","description":"Der Salzgehalt liegt in der Nordsee bei 3,5 %","id":5},{"parent_id":1,"name":"Salzwasser (Ostsee)","description":"Der Salzgehalt liegt in der Ostsee bei 0,3 bis 1,8 %","id":6},{"name":"Strömungsverhältnisse","id":20},{"parent_id":20,"name":"Tidegewässer","id":21},{"name":"Belastungen","id":100},{"parent_id":100,"name":"Eisgang","id":101},{"parent_id":100,"name":"Schiffe","id":102},{"parent_id":100,"name":"Fenderdruck (mechanische Belastung)","id":103},{"parent_id":100,"name":"Wellengang (unspezifizierte Stärke)","id":104},{"parent_id":100,"name":"Wellengang (ruhig < 0,5 m Hs)","description":"Abschätzung nach signifikanter Wellenhöhe\r\nHs = mittlere Höhe des oberen Drittels aller Wellen in Meter","id":105},{"parent_id":100,"name":"Wellengang (mäßig 0,5 m - 1,25 m Hs )","description":"Abschätzung nach signifikanter Wellenhöhe\r\nHs = mittlere Höhe des oberen Drittels aller Wellen in Meter","id":106},{"parent_id":100,"name":"Wellengang (starrk 1,25 m - 2,5 m Hs)","description":"Abschätzung nach signifikanter Wellenhöhe\r\nHs = mittlere Höhe des oberen Drittels aller Wellen in Meter","id":107},{"parent_id":100,"name":"Strömung (unspezifizierte Stärke)","id":108},{"parent_id":100,"name":"Strömung (schwach < 0,2 m/s)","id":109},{"parent_id":100,"name":"Strömung (mäßig 0,2 - 0,5 m/s)","id":110},{"parent_id":100,"name":"Strömung (stark 0,5 - 1,0 m/s)","id":111},{"parent_id":100,"name":"Schraubenstrom","id":112},{"name":"Nutzung (oberseitig)","id":200},{"parent_id":200,"name":"Warenumschlag","id":201},{"parent_id":200,"name":"Warenumschlag mit Portalkränen","id":202},{"parent_id":200,"name":"Betriebsgelände","id":203},{"parent_id":200,"name":"Museum","id":204},{"name":"Nutzung (wasserseitig)","id":300},{"parent_id":300,"name":"Anlegestelle (Schiffsgröße unspezifiziert)","id":301},{"parent_id":300,"name":"Anlegestelle (Schuten und kleine Schiffe)","id":302},{"parent_id":300,"name":"Museum","id":303},{"name":"Stahlsorte","id":400},{"parent_id":400,"name":"St 37","id":401},{"parent_id":400,"name":"St 50/60","id":402},{"parent_id":400,"name":"S430 GP","id":403},{"parent_id":400,"name":"S355 J2H","id":404},{"name":"Stahlgüte","id":700},{"parent_id":700,"name":"StSp S","id":701},{"parent_id":700,"name":"St 37","id":702},{"name":"Spundwandprofile","id":1000},{"parent_id":1000,"name":"Heiß gewalzt","id":1001},{"parent_id":1001,"name":"Heiß gewalzt > U-Profil","id":1002},{"parent_id":1002,"name":"Heiß gewalzt > U-Profil > Rechtwinklig","id":1003},{"parent_id":1003,"name":"LARSSEN","id":1004},{"parent_id":1004,"name":"LARSSEN I","id":1005},{"parent_id":1005,"name":"LARSSEN I","description":"1902-1950er","id":1006},{"parent_id":1005,"name":"LARSSEN I A NEU","description":"1902-1950er","id":1007},{"parent_id":1004,"name":"LARSSEN II","id":1100},{"parent_id":1100,"name":"LARSSEN II","description":"1902-1950er","id":1101},{"parent_id":1100,"name":"LARSSEN II NEU","description":"1902-1950er","id":1102},{"parent_id":1004,"name":"LARSSEN III","id":1200}]}
+{
+    "records": [
+        {
+            "name": "Salzgehalt",
+            "description": "Klassifizierungen des Salzgehaltes",
+            "id": 1
+        },
+        {
+            "parent_id": 1,
+            "name": "Süßwasser",
+            "description": "See- oder Flusswasser mit unter 0,1% Salzgehalt",
+            "id": 2
+        },
+        {
+            "parent_id": 1,
+            "name": "Salzwasser",
+            "description": "See- oder Meerwasser mit einem Salzgehalt von mehr als 1 % (allgemein) bzw. 1,8% (angelsächsischen Raum)",
+            "id": 3
+        },
+        {
+            "parent_id": 1,
+            "name": "Brackwasser",
+            "description": "See- oder Meerwasser mit einem Salzgehalt von 0,1 % bis 1 %",
+            "id": 4
+        },
+        {
+            "parent_id": 1,
+            "name": "Salzwasser (Nordsee)",
+            "description": "Der Salzgehalt liegt in der Nordsee bei 3,5 %",
+            "id": 5
+        },
+        {
+            "parent_id": 1,
+            "name": "Salzwasser (Ostsee)",
+            "description": "Der Salzgehalt liegt in der Ostsee bei 0,3 bis 1,8 %",
+            "id": 6
+        },
+        {
+            "name": "Strömungsverhältnisse",
+            "id": 20
+        },
+        {
+            "parent_id": 20,
+            "name": "Tidegewässer",
+            "id": 21
+        },
+        {
+            "name": "Belastungen",
+            "id": 100
+        },
+        {
+            "parent_id": 100,
+            "name": "Eisgang",
+            "id": 101
+        },
+        {
+            "parent_id": 100,
+            "name": "Schiffe",
+            "id": 102
+        },
+        {
+            "parent_id": 100,
+            "name": "Fenderdruck (mechanische Belastung)",
+            "id": 103
+        },
+        {
+            "parent_id": 100,
+            "name": "Wellengang (unspezifizierte Stärke)",
+            "id": 104
+        },
+        {
+            "parent_id": 100,
+            "name": "Wellengang (ruhig < 0,5 m Hs)",
+            "description": "Abschätzung nach signifikanter Wellenhöhe\r\nHs = mittlere Höhe des oberen Drittels aller Wellen in Meter",
+            "id": 105
+        },
+        {
+            "parent_id": 100,
+            "name": "Wellengang (mäßig 0,5 m - 1,25 m Hs )",
+            "description": "Abschätzung nach signifikanter Wellenhöhe\r\nHs = mittlere Höhe des oberen Drittels aller Wellen in Meter",
+            "id": 106
+        },
+        {
+            "parent_id": 100,
+            "name": "Wellengang (starrk 1,25 m - 2,5 m Hs)",
+            "description": "Abschätzung nach signifikanter Wellenhöhe\r\nHs = mittlere Höhe des oberen Drittels aller Wellen in Meter",
+            "id": 107
+        },
+        {
+            "parent_id": 100,
+            "name": "Strömung (unspezifizierte Stärke)",
+            "id": 108
+        },
+        {
+            "parent_id": 100,
+            "name": "Strömung (schwach < 0,2 m/s)",
+            "id": 109
+        },
+        {
+            "parent_id": 100,
+            "name": "Strömung (mäßig 0,2 - 0,5 m/s)",
+            "id": 110
+        },
+        {
+            "parent_id": 100,
+            "name": "Strömung (stark 0,5 - 1,0 m/s)",
+            "id": 111
+        },
+        {
+            "parent_id": 100,
+            "name": "Schraubenstrom",
+            "id": 112
+        },
+        {
+            "name": "Nutzung (oberseitig)",
+            "id": 200
+        },
+        {
+            "parent_id": 200,
+            "name": "Warenumschlag",
+            "id": 201
+        },
+        {
+            "parent_id": 200,
+            "name": "Warenumschlag mit Portalkränen",
+            "id": 202
+        },
+        {
+            "parent_id": 200,
+            "name": "Betriebsgelände",
+            "id": 203
+        },
+        {
+            "parent_id": 200,
+            "name": "Museum",
+            "id": 204
+        },
+        {
+            "name": "Nutzung (wasserseitig)",
+            "id": 300
+        },
+        {
+            "parent_id": 300,
+            "name": "Anlegestelle (Schiffsgröße unspezifiziert)",
+            "id": 301
+        },
+        {
+            "parent_id": 300,
+            "name": "Anlegestelle (Schuten und kleine Schiffe)",
+            "id": 302
+        },
+        {
+            "parent_id": 300,
+            "name": "Museum",
+            "id": 303
+        },
+        {
+            "name": "Stahlsorte",
+            "id": 400
+        },
+        {
+            "parent_id": 400,
+            "name": "St 37",
+            "id": 401
+        },
+        {
+            "parent_id": 400,
+            "name": "St 50/60",
+            "id": 402
+        },
+        {
+            "parent_id": 400,
+            "name": "S430 GP",
+            "id": 403
+        },
+        {
+            "parent_id": 400,
+            "name": "S355 J2H",
+            "id": 404
+        },
+        {
+            "name": "Stahlgüte",
+            "id": 700
+        },
+        {
+            "parent_id": 700,
+            "name": "StSp S",
+            "id": 701
+        },
+        {
+            "parent_id": 700,
+            "name": "St 37",
+            "id": 702
+        },
+        {
+            "name": "Spundwandprofile",
+            "id": 1000
+        },
+        {
+            "parent_id": 1000,
+            "name": "Heiß gewalzt",
+            "id": 1001
+        },
+        {
+            "parent_id": 1001,
+            "name": "Heiß gewalzt > U-Profil",
+            "id": 1002
+        },
+        {
+            "parent_id": 1002,
+            "name": "Heiß gewalzt > U-Profil > Rechtwinklig",
+            "id": 1003
+        },
+        {
+            "parent_id": 1003,
+            "name": "LARSSEN",
+            "id": 1004
+        },
+        {
+            "parent_id": 1004,
+            "name": "LARSSEN I",
+            "id": 1005
+        },
+        {
+            "parent_id": 1005,
+            "name": "LARSSEN I",
+            "description": "1902-1950er",
+            "id": 1006
+        },
+        {
+            "parent_id": 1005,
+            "name": "LARSSEN I A NEU",
+            "description": "1902-1950er",
+            "id": 1007
+        },
+        {
+            "parent_id": 1004,
+            "name": "LARSSEN II",
+            "id": 1100
+        },
+        {
+            "parent_id": 1100,
+            "name": "LARSSEN II",
+            "description": "1902-1950er",
+            "id": 1101
+        },
+        {
+            "parent_id": 1100,
+            "name": "LARSSEN II NEU",
+            "description": "1902-1950er",
+            "id": 1102
+        },
+        {
+            "parent_id": 1004,
+            "name": "LARSSEN III",
+            "id": 1200
+        }
+    ]
+}
