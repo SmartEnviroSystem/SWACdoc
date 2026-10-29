@@ -20,24 +20,14 @@
         <article>
 
             <h3>Example 17: TableActions Plugin</h3>
-            <p>TableActions adds icon-only buttons to every dataset row. Configure an actions array in
-                the plugin entry. Each action has an id prefix, a UIkit icon name, a title and an onClick function reference.
-                The title is used as a native tooltip and accessible name. Clicking a button passes the dataset id
-                to its function, preserving its original type. Pass <code>onClick: show</code>, not <code>onClick: show()</code>.
-                Functions do not need to be attached to window when they are in scope of the configuration.</p>
-            <p>Button ids use <code>prefix_datasetId</code>, for example <code>show_1</code>.
-                Collisions (including multiple tables or data sources) receive a numeric suffix.
-                SWAC normally generates ids for datasets without one; if no id reaches the plugin,
-                it uses a row number instead. New rows loaded later also receive buttons.
-                The action column is added only when the plugin is active and actions are configured.</p>
-            <p>Alternatively, use SWAC's separate plugin options variable
-                <code>window['TableActions_present_example17_options'] = {actions: [...]}</code>.
-                Its actions override those in the plugin entry. This plugin targets
-                <code>table_for_all_datasets</code> and compatible table templates.</p>
-            <p id="tableactions_result" role="status" aria-live="polite">Click an action button to see its dataset id.</p>
+            <p>TableActions adds configurable icon buttons to each table row. Each action defines an id prefix,
+                a UIkit icon, a title for tooltips and accessibility, and an onClick function.</p>
+            <p>The function receives the complete dataset, for example <code>show(dataset)</code>.
+                Access fields directly with <code>dataset.id</code>, or use <code>dataset.set_json</code>
+                to get a JSON string without internal SWAC references for sending or storing the data.</p>
+            <pre id="tableactions_result"></pre>
+            <div id="present_example17" swa="Present FROM ../../../data/visualisation/present/example17/data.json TEMPLATE table_for_all_datasets"></div>
 
-            <div id="present_example17" swa="Present FROM ../../../data/visualisation/present/example16/data.json TEMPLATE table_for_all_datasets"></div>
-            
             <fieldset>
                 <legend>VIEW-Requestor</legend>
                 <div id="present_example17_html" swa="Coder FROM #present_example17"></div>
@@ -48,7 +38,7 @@
             </fieldset>
             <fieldset>
                 <legend>DATASOURCE</legend>
-                <div id="present_example17_datasource" swa="Coder FROM ../../../data/visualisation/present/example16/data.json"></div>
+                <div id="present_example17_datasource" swa="Coder FROM ../../../data/visualisation/present/example17/data.json"></div>
             </fieldset>
         </article>
         <footer>
