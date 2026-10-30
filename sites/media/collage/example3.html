@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>SWAC - collage: Example 3: Live data from SmartData</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../files/icons/32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../files/icons/16x16.png">
+        <link rel="stylesheet" type="text/css" href="../../../css/global.css">
+
+        <link rel="stylesheet" type="text/css" href="/SWAC/swac/libs/uikit/css/uikit.min.css">
+        <script src="/SWAC/swac/libs/uikit/js/uikit.min.js"></script>
+        <script src="/SWAC/swac/libs/uikit/js/uikit-icons.min.js"></script>
+        <script src="/SWAC/swac/swac.js" type="module"></script>
+
+        <script src="../../../js/media/collage/example3.js"></script>
+    </head>
+    <body>
+        <header id="head_navigation" swa="Navigation FROM routes.json"></header>
+        <article>
+            <h1>Example 3: Live data from SmartData</h1>
+            <p>Loads the sky images from the collection unimunic_asi of SmartDataHELIOS. SmartData evaluates
+                the filters of the collage, so only the shown images are transferred, even if there are
+                thousands of images.
+                <br>The function showTimepoint() loads the images beginning at the timepoint from the form.
+                <br>This example needs the database smartmonitoring_helios and SmartDataHELIOS on the
+                server like in the SmartMonitoringDeveloper environment. If the images do not appear after
+                starting the database, reload the page with <a href="?clearstates=true">clearstates=true</a>.</p>
+            <form id="collage_example3_form" class="uk-margin-small">
+                <label for="collage_example3_timepoint">Timepoint:</label>
+                <input id="collage_example3_timepoint" class="uk-input uk-form-small uk-form-width-medium" type="datetime-local" step="1"
+                       value="2026-06-15T02:00:00" min="2026-06-15T00:00:06" max="2026-06-15T03:20:05">
+                <button class="uk-button uk-button-default uk-button-small">Show</button>
+            </form>
+            <div id="collage_example3" swa="Collage FROM /SmartDataHELIOS/smartdata/records/unimunic_asi WHERE storage=smartmonitoring AND order=ts,ASC AND size=12 AND includes=id,ts,origin_url"></div>
+
+            <fieldset>
+                <legend>VIEW-Requestor</legend>
+                <pre><code class="lang-html">
+&lt;div id="collage_example3" swa="Collage FROM /SmartDataHELIOS/smartdata/records/unimunic_asi WHERE storage=smartmonitoring AND order=ts,ASC AND size=12 AND includes=id,ts,origin_url"&gt;&lt;/div&gt;
+        </code></pre>
+            </fieldset>
+            <fieldset>
+                <legend>CONFIGURATION</legend>
+                <div id="collage_example3_config" swa="Coder FROM ../../../js/media/collage/example3.js"></div>
+            </fieldset>
+            <fieldset>
+                <legend>DATASOURCE</legend>
+                <p>The collage requests the images before and after the shown ones with filters on ts, for example:</p>
+                <pre><code>/SmartDataHELIOS/smartdata/records/unimunic_asi?storage=smartmonitoring&amp;includes=id,ts,origin_url&amp;filter=ts,gt,2026-06-15T02:01:50&amp;order=ts,asc&amp;size=12</code></pre>
+            </fieldset>
+        </article>
+        <footer>
+            <a href="../../about/privacy.html">Privacy policy / Datenschutzerklärung</a>
+            <a href="../../about/imprint.html">Imprint / Impressum</a>
+            <a class="toplink" href="#">Top</a>
+        </footer>
+    </body>
+</html>

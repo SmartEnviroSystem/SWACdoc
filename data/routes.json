@@ -63,6 +63,7 @@
 {"id": 102, "rfrom": "*", "rto": "media/preview/index.html", "name": "Mediapreview", "parent": 100},
 {"id": 103, "rfrom": "*", "rto": "media/player/index.html", "name": "Mediaplayer", "parent": 100},
 {"id": 104, "rfrom": "*", "rto": "media/editor/index.html", "name": "Mediaeditor", "parent": 100},
+{"id": 105, "rfrom": "*", "rto": "media/collage/index.html", "name": "Collage", "parent": 100},
 
 {"id": 200, "rfrom": "*", "rto": "#", "name": "Algorithms:"},
 {"id": 201, "rfrom": "*", "rto": "algorithms/constraintsolver.html", "name": "ConstraintSolver", "parent": 200},
