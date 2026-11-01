@@ -1,0 +1,112 @@
+{
+    "records": [
+        {
+            "id": 1,
+            "name": "Messpunkt 1",
+            "latitude": 52.03,
+            "longitude": 8.53,
+            "irradiance": 820,
+            "cloudcover": 5,
+            "temperature": 21.4
+        },
+        {
+            "id": 2,
+            "name": "Messpunkt 2",
+            "latitude": 52.06,
+            "longitude": 8.42,
+            "irradiance": 760,
+            "cloudcover": 15,
+            "temperature": 20.1
+        },
+        {
+            "id": 3,
+            "name": "Messpunkt 3",
+            "latitude": 52.0,
+            "longitude": 8.65,
+            "irradiance": 610,
+            "cloudcover": 35,
+            "temperature": 18.7
+        },
+        {
+            "id": 4,
+            "name": "Messpunkt 4",
+            "latitude": 52.11,
+            "longitude": 8.6,
+            "irradiance": 450,
+            "cloudcover": 55,
+            "temperature": 17.2
+        },
+        {
+            "id": 5,
+            "name": "Messpunkt 5",
+            "latitude": 51.98,
+            "longitude": 8.4,
+            "irradiance": 300,
+            "cloudcover": 75,
+            "temperature": 15.9
+        },
+        {
+            "id": 6,
+            "name": "Messpunkt 6",
+            "latitude": 52.09,
+            "longitude": 8.75,
+            "irradiance": 150,
+            "cloudcover": 95,
+            "temperature": 14.3
+        },
+        {
+            "id": 7,
+            "name": "Messpunkt 7",
+            "latitude": 51.95,
+            "longitude": 8.55,
+            "irradiance": 690,
+            "cloudcover": 25,
+            "temperature": 19.5
+        },
+        {
+            "id": 8,
+            "name": "Messpunkt 8",
+            "latitude": 52.14,
+            "longitude": 8.47,
+            "irradiance": 380,
+            "cloudcover": 65,
+            "temperature": 16.4
+        },
+        {
+            "id": 9,
+            "name": "Messpunkt 9",
+            "latitude": 52.02,
+            "longitude": 8.82,
+            "irradiance": 900,
+            "cloudcover": 0,
+            "temperature": 23.0
+        },
+        {
+            "id": 10,
+            "name": "Messpunkt 10",
+            "latitude": 51.92,
+            "longitude": 8.7,
+            "irradiance": 240,
+            "cloudcover": 85,
+            "temperature": 12.8
+        },
+        {
+            "id": 11,
+            "name": "Messpunkt 11",
+            "latitude": 52.17,
+            "longitude": 8.68,
+            "irradiance": 530,
+            "cloudcover": 45,
+            "temperature": 9.6
+        },
+        {
+            "id": 12,
+            "name": "Messpunkt 12",
+            "latitude": 51.96,
+            "longitude": 8.3,
+            "irradiance": 70,
+            "cloudcover": 100,
+            "temperature": 4.2
+        }
+    ]
+}

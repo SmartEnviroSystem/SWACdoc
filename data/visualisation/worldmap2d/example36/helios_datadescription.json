@@ -1,0 +1,102 @@
+{
+    "irradiance": {
+        "txt_title": "Einstrahlung (W/m²)",
+        "txt_desc": "Die Einstrahlung ist {voc}.",
+        "txt_uknw": "unbekannt",
+        "col": "#FFD326",
+        "calcmode": "<",
+        "minValue": 0,
+        "maxValue": 1000,
+        "values": {
+            "200": {
+                "txt": "< 200 sehr gering",
+                "col": "#3D3D3D"
+            },
+            "400": {
+                "txt": "< 400 gering",
+                "col": "#2A81CB"
+            },
+            "700": {
+                "txt": "< 700 mittel",
+                "col": "#CB8427"
+            },
+            "1500": {
+                "txt": ">= 700 hoch",
+                "col": "#FFD326"
+            }
+        }
+    },
+    "cloudcover": {
+        "txt_title": "Bewölkung (%)",
+        "txt_desc": "Der Himmel ist {voc}.",
+        "txt_uknw": "unbekannt",
+        "col": "#7B7B7B",
+        "calcmode": "<",
+        "minValue": 0,
+        "maxValue": 100,
+        "values": {
+            "20": {
+                "txt": "< 20 klar",
+                "col": "#FFD326"
+            },
+            "50": {
+                "txt": "< 50 leicht bewölkt",
+                "col": "#CAC428"
+            },
+            "80": {
+                "txt": "< 80 bewölkt",
+                "col": "#7B7B7B"
+            },
+            "101": {
+                "txt": "bis 100 bedeckt",
+                "col": "#3D3D3D"
+            }
+        }
+    },
+    "temperature": {
+        "txt_title": "Temperatur (°C)",
+        "txt_desc": "Die Temperatur ist {voc}.",
+        "txt_uknw": "unbekannt",
+        "col": "#CB2B3E",
+        "calcmode": "gradient",
+        "values": {
+            "0": {
+                "txt": "kalt",
+                "col": "#2A81CB"
+            },
+            "15": {
+                "txt": "mild",
+                "col": "#2AAD27"
+            },
+            "30": {
+                "txt": "warm",
+                "col": "#CB2B3E"
+            }
+        }
+    },
+    "pv_quality": {
+        "txt_title": "PV-Eignung (kombiniert)",
+        "txt_desc": "Die Eignung für Photovoltaik ist {voc}.",
+        "txt_uknw": "unbekannt",
+        "col": "#2AAD27",
+        "calcmode": "<",
+        "values": {
+            "25": {
+                "txt": "< 25 % schlecht",
+                "col": "#CB2B3E"
+            },
+            "50": {
+                "txt": "< 50 % mäßig",
+                "col": "#CB8427"
+            },
+            "75": {
+                "txt": "< 75 % gut",
+                "col": "#CAC428"
+            },
+            "101": {
+                "txt": "ab 75 % sehr gut",
+                "col": "#2AAD27"
+            }
+        }
+    }
+}
