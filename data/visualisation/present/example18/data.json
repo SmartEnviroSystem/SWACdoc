@@ -1,0 +1,10 @@
+{
+    "records": [
+        {"id": 1, "name": "Import data", "description": "Start of the import chain"},
+        {"id": 2, "name": "Validate data", "description": "Follows the import"},
+        {"id": 3, "name": "Create report", "description": "Follows validation"},
+        {"id": 4, "name": "Clean temporary files", "description": "Independent job"},
+        {"id": 5, "name": "Collect measurements", "description": "Start of another chain"},
+        {"id": 6, "name": "Archive measurements", "description": "Follows collection"}
+    ]
+}
