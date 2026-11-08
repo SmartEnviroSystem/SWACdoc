@@ -28,6 +28,31 @@
                 <br>This example needs the database smartmonitoring_helios and SmartDataHELIOS like example 3.
                 If nothing appears after starting the database, reload the page with
                 <a href="?clearstates=true">clearstates=true</a>.</p>
+            <p>The interval draws only one image every 20 seconds, 30 seconds and so on (option keogramInterval).
+                Click, arrow keys and playback then use only these images. The speed changes the time each image
+                is shown while playing (option playInterval). With high speeds the loading of the images from
+                the LMU can be slower than the chosen speed.</p>
+            <form class="uk-grid-small uk-child-width-1-2@m uk-margin" uk-grid>
+                <div>
+                    <label class="uk-form-label" for="collage_example5_interval">keogramInterval</label>
+                    <select id="collage_example5_interval" class="uk-select uk-form-small">
+                        <option value="0">All images (about 10 s)</option>
+                        <option value="20">20 s</option>
+                        <option value="30">30 s</option>
+                        <option value="60">1 min</option>
+                        <option value="300">5 min</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="uk-form-label" for="collage_example5_speed">playInterval</label>
+                    <select id="collage_example5_speed" class="uk-select uk-form-small">
+                        <option value="500">x1 (500 ms)</option>
+                        <option value="250">x2 (250 ms)</option>
+                        <option value="100">x5 (100 ms)</option>
+                        <option value="50">x10 (50 ms)</option>
+                    </select>
+                </div>
+            </form>
             <h2>Columns (north-south)</h2>
             <div id="collage_example5" swa="Collage FROM /SmartDataHELIOS/smartdata/records/unimunic_asi WHERE storage=smartmonitoring AND order=ts,ASC AND size=1200 AND includes=id,ts,origin_url,keogram_column_png"></div>
             <h2>Rows (east-west)</h2>
