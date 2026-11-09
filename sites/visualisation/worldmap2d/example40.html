@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>SWAC - Worldmap2d component - Example 40: Circle areas, custom icons and area color per dataset</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../files/icons/32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../files/icons/16x16.png">
+        <link rel="stylesheet" type="text/css" href="../../../css/global.css">
+
+        <link rel="stylesheet" type="text/css" href="/SWAC/swac/libs/uikit/css/uikit.min.css">
+        <script src="/SWAC/swac/libs/uikit/js/uikit.min.js"></script>
+        <script src="/SWAC/swac/libs/uikit/js/uikit-icons.min.js"></script>
+        <script src="/SWAC/swac/swac.js" type="module"></script>
+
+        <script src="../../../js/visualisation/worldmap2d/example40.js"></script>
+    </head>
+    <body>
+        <header id="head_navigation" swa="Navigation FROM routes.json"></header>
+
+        <h3>Example 40: Circle areas, custom icons and area color per dataset</h3>
+        <p>All-Sky-Imager stations observe the sky in a circle around them (<code>areaShape: 'circle'</code>).
+                Datasets can bring their own icon with the attribute <code>map_icon</code> (size over the option
+                <code>mapIconOptions</code>) and can choose the attribute for the fill color of their area with
+                <code>map_areacolorattr</code>, which overwrites the option <code>areaColorAttr</code>.
+                Here the stations in Detmold and Halle are colored by cloud cover, all others by irradiance.
+                The option <code>areaStyle</code> sets the style of the areas (here dark lines).</p>
+
+        <div id="worldmap2d_example40" swa="Worldmap2d FROM ../../../data/visualisation/worldmap2d/example40/asi_stations.json"></div>
+        <div id="worldmap2d_datadescription_example40" swa="Datadescription FROM ../../../data/visualisation/worldmap2d/example36/helios_datadescription.json"></div>
+
+        <fieldset>
+            <legend>VIEW-Requestor</legend>
+            <pre><code class="lang-html">
+&lt;div id="worldmap2d_example40" swa="Worldmap2d FROM ../../../data/visualisation/worldmap2d/example40/asi_stations.json"&gt;&lt;/div&gt;
+&lt;div id="worldmap2d_datadescription_example40" swa="Datadescription FROM ../../../data/visualisation/worldmap2d/example36/helios_datadescription.json"&gt;&lt;/div&gt;
+        </code></pre>
+        </fieldset>
+        <fieldset>
+            <legend>CONFIGURATION</legend>
+            <div id="worldmap2d_example40_conf" swa="Coder FROM ../../../js/visualisation/worldmap2d/example40.js"></div>
+        </fieldset>
+        <fieldset>
+            <legend>DATASOURCE</legend>
+            <div id="worldmap2d_example40_datasource" swa="Coder FROM ../../../data/visualisation/worldmap2d/example40/asi_stations.json"></div>
+            <p>The datadescription uses the following definition data (thats the components data, not the configuration)</p>
+            <div id="worldmap2d_example40_datadesc" swa="Coder FROM ../../../data/visualisation/worldmap2d/example36/helios_datadescription.json"></div>
+        </fieldset>
+
+        <footer>
+            <a href="../about/privacy.html">Privacy policy / Datenschutzerklärung</a>
+            <a href="../about/imprint.html">Imprint / Impressum</a>
+            <a class="toplink" href="#">Top</a>
+        </footer>
+    </body>
+</html>

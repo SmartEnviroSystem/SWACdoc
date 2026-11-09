@@ -1,0 +1,164 @@
+{
+    "records": [
+        {
+            "id": 1,
+            "name": "Rasterzelle 1/1",
+            "latitude": 52.06,
+            "longitude": 8.47,
+            "irradiance": 282,
+            "cloudcover": 79
+        },
+        {
+            "id": 2,
+            "name": "Rasterzelle 1/2",
+            "latitude": 52.06,
+            "longitude": 8.51383,
+            "irradiance": 294,
+            "cloudcover": 79
+        },
+        {
+            "id": 3,
+            "name": "Rasterzelle 1/3",
+            "latitude": 52.06,
+            "longitude": 8.55766,
+            "irradiance": 487,
+            "cloudcover": 57
+        },
+        {
+            "id": 4,
+            "name": "Rasterzelle 1/4",
+            "latitude": 52.06,
+            "longitude": 8.6015,
+            "irradiance": 679,
+            "cloudcover": 35
+        },
+        {
+            "id": 5,
+            "name": "Rasterzelle 1/5",
+            "latitude": 52.06,
+            "longitude": 8.64533,
+            "irradiance": 871,
+            "cloudcover": 13
+        },
+        {
+            "id": 6,
+            "name": "Rasterzelle 2/1",
+            "latitude": 52.03305,
+            "longitude": 8.47,
+            "irradiance": 512,
+            "cloudcover": 51
+        },
+        {
+            "id": 7,
+            "name": "Rasterzelle 2/2",
+            "latitude": 52.03305,
+            "longitude": 8.51381,
+            "irradiance": 343,
+            "cloudcover": 73
+        },
+        {
+            "id": 8,
+            "name": "Rasterzelle 2/3",
+            "latitude": 52.03305,
+            "longitude": 8.55761,
+            "irradiance": 355,
+            "cloudcover": 73
+        },
+        {
+            "id": 9,
+            "name": "Rasterzelle 2/4",
+            "latitude": 52.03305,
+            "longitude": 8.60142,
+            "irradiance": 548,
+            "cloudcover": 51
+        },
+        {
+            "id": 10,
+            "name": "Rasterzelle 2/5",
+            "latitude": 52.03305,
+            "longitude": 8.64522,
+            "irradiance": 740,
+            "cloudcover": 29
+        },
+        {
+            "id": 11,
+            "name": "Rasterzelle 3/1",
+            "latitude": 52.0061,
+            "longitude": 8.47,
+            "irradiance": 741,
+            "cloudcover": 23
+        },
+        {
+            "id": 12,
+            "name": "Rasterzelle 3/2",
+            "latitude": 52.0061,
+            "longitude": 8.51378,
+            "irradiance": 573,
+            "cloudcover": 45
+        },
+        {
+            "id": 13,
+            "name": "Rasterzelle 3/3",
+            "latitude": 52.0061,
+            "longitude": 8.55756,
+            "irradiance": 405,
+            "cloudcover": 67
+        },
+        {
+            "id": 14,
+            "name": "Rasterzelle 3/4",
+            "latitude": 52.0061,
+            "longitude": 8.60134,
+            "irradiance": 417,
+            "cloudcover": 67
+        },
+        {
+            "id": 15,
+            "name": "Rasterzelle 3/5",
+            "latitude": 52.0061,
+            "longitude": 8.64512,
+            "irradiance": 609,
+            "cloudcover": 45
+        },
+        {
+            "id": 16,
+            "name": "Rasterzelle 4/1",
+            "latitude": 51.97915,
+            "longitude": 8.47,
+            "irradiance": 930,
+            "cloudcover": 0
+        },
+        {
+            "id": 17,
+            "name": "Rasterzelle 4/2",
+            "latitude": 51.97915,
+            "longitude": 8.51375,
+            "irradiance": 803,
+            "cloudcover": 17
+        },
+        {
+            "id": 18,
+            "name": "Rasterzelle 4/3",
+            "latitude": 51.97915,
+            "longitude": 8.55751,
+            "irradiance": 634,
+            "cloudcover": 39
+        },
+        {
+            "id": 19,
+            "name": "Rasterzelle 4/4",
+            "latitude": 51.97915,
+            "longitude": 8.60126,
+            "irradiance": 466,
+            "cloudcover": 61
+        },
+        {
+            "id": 20,
+            "name": "Rasterzelle 4/5",
+            "latitude": 51.97915,
+            "longitude": 8.64501,
+            "irradiance": 478,
+            "cloudcover": 61
+        }
+    ]
+}

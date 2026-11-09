@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>SWAC - Worldmap2d component - Example 39: Display raster data as areas around the locations</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../files/icons/32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../files/icons/16x16.png">
+        <link rel="stylesheet" type="text/css" href="../../../css/global.css">
+
+        <link rel="stylesheet" type="text/css" href="/SWAC/swac/libs/uikit/css/uikit.min.css">
+        <script src="/SWAC/swac/libs/uikit/js/uikit.min.js"></script>
+        <script src="/SWAC/swac/libs/uikit/js/uikit-icons.min.js"></script>
+        <script src="/SWAC/swac/swac.js" type="module"></script>
+
+        <script src="../../../js/visualisation/worldmap2d/example39.js"></script>
+    </head>
+    <body>
+        <header id="head_navigation" swa="Navigation FROM routes.json"></header>
+
+        <h3>Example 39: Display raster data as areas around the locations</h3>
+        <p>Sometimes data is given for a concrete location, but ment for an area around this location,
+                e.g. satellite data where each value describes a raster cell of 3 x 3 km. With the option
+                <code>areaShape</code> (<code>rect</code> or <code>circle</code>) an area is drawn around every location,
+                <code>areaSize</code> sets its size in meters. The option <code>areaColorAttr</code> decides which
+                value of the dataset determines the fill color. The colors are taken from the
+                <a href="../datadescription/index.html">Datadescription component</a>.
+                <br>With the ColorSelect plugin the user can choose another attribute, markers and areas are recolored.</p>
+
+        <div id="worldmap2d_example39" swa="Worldmap2d FROM ../../../data/visualisation/worldmap2d/example39/satellite_raster.json"></div>
+        <div id="worldmap2d_datadescription_example39" swa="Datadescription FROM ../../../data/visualisation/worldmap2d/example36/helios_datadescription.json"></div>
+
+        <fieldset>
+            <legend>VIEW-Requestor</legend>
+            <pre><code class="lang-html">
+&lt;div id="worldmap2d_example39" swa="Worldmap2d FROM ../../../data/visualisation/worldmap2d/example39/satellite_raster.json"&gt;&lt;/div&gt;
+&lt;div id="worldmap2d_datadescription_example39" swa="Datadescription FROM ../../../data/visualisation/worldmap2d/example36/helios_datadescription.json"&gt;&lt;/div&gt;
+        </code></pre>
+        </fieldset>
+        <fieldset>
+            <legend>CONFIGURATION</legend>
+            <div id="worldmap2d_example39_conf" swa="Coder FROM ../../../js/visualisation/worldmap2d/example39.js"></div>
+        </fieldset>
+        <fieldset>
+            <legend>DATASOURCE</legend>
+            <div id="worldmap2d_example39_datasource" swa="Coder FROM ../../../data/visualisation/worldmap2d/example39/satellite_raster.json"></div>
+            <p>The datadescription uses the following definition data (thats the components data, not the configuration)</p>
+            <div id="worldmap2d_example39_datadesc" swa="Coder FROM ../../../data/visualisation/worldmap2d/example36/helios_datadescription.json"></div>
+        </fieldset>
+
+        <footer>
+            <a href="../about/privacy.html">Privacy policy / Datenschutzerklärung</a>
+            <a href="../about/imprint.html">Imprint / Impressum</a>
+            <a class="toplink" href="#">Top</a>
+        </footer>
+    </body>
+</html>
