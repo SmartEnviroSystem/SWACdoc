@@ -12,7 +12,7 @@
         <script src="/SWAC/swac/libs/uikit/js/uikit.min.js"></script>
         <script src="/SWAC/swac/libs/uikit/js/uikit-icons.min.js"></script>
         <script src="/SWAC/swac/swac.js" type="module"></script>
-        
+
         <script src="../../../js/visualisation/present/example17.js"></script>
     </head>
     <body>
@@ -21,10 +21,14 @@
 
             <h3>Example 17: TableActions Plugin</h3>
             <p>TableActions adds configurable icon buttons to each table row. Each action defines an id prefix,
-                a UIkit icon, a title for tooltips and accessibility, and an onClick function.</p>
+                a UIkit icon, a title for tooltips and accessibility, and an onClick function.
+                Optional <code>visible(dataset)</code> and <code>disabled(dataset)</code> functions control
+                each button. Here, Edit appears only for even-numbered ids; the checkbox enables it.
+                Call <code>view.getPlugin('TableActions').swac_comp.refresh()</code> after external state changes.</p>
             <p>The function receives the complete dataset, for example <code>show(dataset)</code>.
                 Access fields directly with <code>dataset.id</code>, or use <code>dataset.set_json</code>
                 to get a JSON string without internal SWAC references for sending or storing the data.</p>
+            <label><input id="tableactions_edit_enabled" class="uk-checkbox" type="checkbox" disabled> Enable editing for even-numbered rows</label>
             <pre id="tableactions_result"></pre>
             <div id="present_example17" swa="Present FROM ../../../data/visualisation/present/example17/data.json TEMPLATE table_for_all_datasets"></div>
 
