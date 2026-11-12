@@ -1,0 +1,22 @@
+{
+    "records": [
+        {
+            "id": 1,
+            "ts": "2026-01-07T08:00:00",
+            "temperature": 2.1,
+            "humidity": 80
+        },
+        {
+            "id": 2,
+            "ts": "2026-01-07T10:00:00",
+            "temperature": 4.6,
+            "humidity": 72
+        },
+        {
+            "id": 3,
+            "ts": "2026-01-07T12:00:00",
+            "temperature": 7.3,
+            "humidity": 63
+        }
+    ]
+}
