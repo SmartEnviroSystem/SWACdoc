@@ -20,14 +20,17 @@
         <article>
 
             <h3>Example 18: TableHierarchy Plugin</h3>
-            <p>TableHierarchy groups related rows below an expandable start row. Configure relations with
+            <p>TableHierarchy groups related rows below an expandable parent row. Configure relations with
                 <code>parentId</code> and <code>childId</code>, or provide an async <code>loadRelations</code> function.
-                Expand a start row to see its complete chain; independent rows remain visible.</p>
-            <p>Sorting keeps chains together. Column filters combine with AND and show the complete chain
+                Expand a parent row to see all its descendants; independent rows remain visible.</p>
+            <p>Sorting keeps groups together. Column filters combine with AND and show the complete group
                 when a member matches. Clear the filters to restore the previous expanded state.
                 With <code>linear: true</code>, branching or cyclic groups stay flat with a warning.
-                Action buttons receive the original dataset of their own row.</p>
-            <pre id="tablehierarchy_result"></pre>
+                <code>expandWhen(dataset)</code> keeps a group open while any member matches.
+                Entry 2 has <code>highlighted: true</code>, so its group opens automatically and cannot be collapsed.
+                Uncheck the option to return to manual expansion. Call the plugin's <code>render()</code>
+                after external state changes.</p>
+            <label><input id="tablehierarchy_autoexpand" class="uk-checkbox" type="checkbox" checked disabled> Keep groups with highlighted entries expanded</label>
             <div id="present_example18" swa="Present FROM ../../../data/visualisation/present/example18/data.json TEMPLATE table_for_all_datasets"></div>
 
             <fieldset>
