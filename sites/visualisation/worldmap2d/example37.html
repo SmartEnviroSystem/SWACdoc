@@ -21,8 +21,9 @@
         <h3>Example 37: Let the user choose the attribute for coloring</h3>
         <p>The <b>ColorSelect</b> plugin adds a button to the map. There the user can choose which attribute
                 determines the color of the markers (and areas). A legend for the chosen attribute is shown.
-                The entry <i>Default</i> returns to the coloring configured by the administrator.
-                <br>Other scripts can use <code>setColorAttr(attr)</code> on the map component and listen to the event
+                The entry <i>Default</i> returns to the coloring configured by the administrator (option <code>colorAttr</code>).
+                All attributes described in the datadescription are offered, the option <code>attributes</code> can limit them.
+                <br>Other scripts can use <code>setUserAttr(attr)</code> on the plugin and listen to the event
                 <code>swac_REQUESTOR_ID_colorattr_changed</code>.</p>
 
         <div id="worldmap2d_example37" swa="Worldmap2d FROM ../../../data/visualisation/worldmap2d/example36/helios_measurements.json"></div>

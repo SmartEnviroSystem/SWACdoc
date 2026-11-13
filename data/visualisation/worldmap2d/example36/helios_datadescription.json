@@ -3,6 +3,7 @@
         "txt_title": "Einstrahlung (W/m²)",
         "txt_desc": "Die Einstrahlung ist {voc}.",
         "txt_uknw": "unbekannt",
+        "col_uknw": "#808080",
         "col": "#FFD326",
         "calcmode": "<",
         "minValue": 0,
@@ -30,6 +31,7 @@
         "txt_title": "Bewölkung (%)",
         "txt_desc": "Der Himmel ist {voc}.",
         "txt_uknw": "unbekannt",
+        "col_uknw": "#808080",
         "col": "#7B7B7B",
         "calcmode": "<",
         "minValue": 0,
@@ -57,6 +59,7 @@
         "txt_title": "Temperatur (°C)",
         "txt_desc": "Die Temperatur ist {voc}.",
         "txt_uknw": "unbekannt",
+        "col_uknw": "#808080",
         "col": "#CB2B3E",
         "calcmode": "gradient",
         "values": {
@@ -78,7 +81,17 @@
         "txt_title": "PV-Eignung (kombiniert)",
         "txt_desc": "Die Eignung für Photovoltaik ist {voc}.",
         "txt_uknw": "unbekannt",
+        "col_uknw": "#808080",
         "col": "#2AAD27",
+        "combine": {
+            "attrs": ["irradiance", "cloudcover"],
+            "mode": "weighted",
+            "weights": {
+                "irradiance": 2,
+                "cloudcover": 1
+            },
+            "invert": ["cloudcover"]
+        },
         "calcmode": "<",
         "values": {
             "25": {

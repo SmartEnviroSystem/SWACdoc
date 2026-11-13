@@ -6,9 +6,7 @@ window['worldmap2d_example40_options'] = {
     // Each station observes the sky in a circle of 8 km diameter around it
     areaShape: 'circle',
     areaSize: 8000,
-    // Fill color from irradiance, datasets can use another attribute with map_areacolorattr
-    areaColorAttr: 'irradiance',
-    // Dark lines around the areas, the fill color depends on the data
+    // Dark lines around the areas, the fill color comes from the datadescription
     areaStyle: {
         color: '#333333',
         weight: 1,
@@ -20,10 +18,16 @@ window['worldmap2d_example40_options'] = {
         iconAnchor: [18, 36],
         popupAnchor: [0, -36]
     },
-    colorAttr: 'irradiance'
-};
-
-// Datadescription components options
-window['worldmap2d_datadescription_example40_options'] = {
-    visuAttribute: 'irradiance'
+    plugins: new Map([
+        // All coloring settings are made in the ColorSelect plugin
+        ['ColorSelect', {
+                id: 'ColorSelect',
+                active: true,
+                // Fill color from irradiance, datasets can use another attribute with map_areacolorattr
+                colorAttr: 'irradiance',
+                userSelect: false,
+                startOpened: true
+            }
+        ]
+    ])
 };

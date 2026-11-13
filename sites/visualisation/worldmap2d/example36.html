@@ -19,11 +19,12 @@
         <header id="head_navigation" swa="Navigation FROM routes.json"></header>
 
         <h3>Example 36: Color markers by an attribute chosen by the administrator</h3>
-        <p>With the option <code>colorAttr</code> the administrator decides which attribute of the datasets
-                determines the color of the markers (and areas). The colors are defined once in the
+        <p>All settings for coloring are made in the <b>ColorSelect</b> plugin. With its option <code>colorAttr</code>
+                the administrator decides which attribute of the datasets determines the color of the markers (and areas).
+                With <code>userSelect: false</code> the user can not change it, only the legend is shown.
+                The colors are defined once in the
                 <a href="../datadescription/index.html">Datadescription component</a>. Colors without a matching
-                marker icon (e.g. from gradients) are drawn as SVG markers.
-                <br>The option can also be set per datasource: <code>datasources.get(NAME).colorAttr</code>.</p>
+                marker icon (e.g. from gradients) are drawn as SVG markers.</p>
 
         <div id="worldmap2d_example36" swa="Worldmap2d FROM ../../../data/visualisation/worldmap2d/example36/helios_measurements.json"></div>
         <div id="worldmap2d_datadescription_example36" swa="Datadescription FROM ../../../data/visualisation/worldmap2d/example36/helios_datadescription.json"></div>
