@@ -1,0 +1,52 @@
+{
+    "VIS006": {
+        "txt_title": "Visible light 0.6 µm (%)",
+        "txt_desc": "The reflectance is {voc}.",
+        "txt_uknw": "unknown",
+        "col_uknw": "#808080",
+        "calcmode": "gradient",
+        "values": {
+            "0": {
+                "txt": "ground",
+                "col": "#08306B"
+            },
+            "15": {
+                "txt": "few clouds",
+                "col": "#4292C6"
+            },
+            "30": {
+                "txt": "clouds",
+                "col": "#C6DBEF"
+            },
+            "50": {
+                "txt": "dense clouds",
+                "col": "#FFFFFF"
+            }
+        }
+    },
+    "IR_134": {
+        "txt_title": "Infrared 13.4 µm (K)",
+        "txt_desc": "The brightness temperature is {voc}.",
+        "txt_uknw": "unknown",
+        "col_uknw": "#808080",
+        "calcmode": "gradient",
+        "values": {
+            "225": {
+                "txt": "very cold, high clouds",
+                "col": "#FFFFFF"
+            },
+            "240": {
+                "txt": "cold, clouds",
+                "col": "#9ECAE1"
+            },
+            "252": {
+                "txt": "medium",
+                "col": "#3182BD"
+            },
+            "265": {
+                "txt": "warm, no clouds",
+                "col": "#08306B"
+            }
+        }
+    }
+}
