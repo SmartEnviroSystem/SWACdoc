@@ -350,6 +350,16 @@ SWAC_config.globalparams = {
             <div id="data_example27_configuration" swa="Coder FROM ../../js/concepts/3_data_example27.js"></div>
             <a href="3_data_example27.html">See working example here</a>
 
+            <h3>Switch between datasources</h3>
+            <p>With the option datasources a component gets additional named datasources.
+                The value is a Map with the name as key and the fromName (or an object with
+                fromName and fromWheres) as value. The source from the FROM clause is added
+                automatically. Views with showSidebar=true offer the choice in the sidebar,
+                in code use switchDatasource(name). The shown datasets are replaced by the
+                datasets of the choosen source and the plugins of the component are loaded again.</p>
+            <div id="data_datasources_configuration" swa="Coder FROM ../../js/visualisation/present/example17.js"></div>
+            <a href="../visualisation/present/example17.html">See working example here</a>
+
             <h2 class="uk-heading-divider">Automatic datavolume saveing</h2>
             <p>SWAC components can use the same data. In those cases SWAC automatically 
                 detect the same useage and shares the one time fetsched data over all 

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>SWAC - present component - Example 17</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../files/icons/32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../files/icons/16x16.png">
+        <link rel="stylesheet" type="text/css" href="../../../css/global.css">
+
+        <link rel="stylesheet" type="text/css" href="/SWAC/swac/libs/uikit/css/uikit.min.css">
+        <script src="/SWAC/swac/libs/uikit/js/uikit.min.js"></script>
+        <script src="/SWAC/swac/libs/uikit/js/uikit-icons.min.js"></script>
+        <script src="/SWAC/swac/swac.js" type="module"></script>
+
+        <script src="../../../js/visualisation/present/example17.js"></script>
+    </head>
+    <body>
+        <header id="head_navigation" swa="Navigation FROM routes.json"></header>
+        <article>
+
+            <h3>Example 17: Switch between datasources</h3>
+            <p>Every component can get a list of additional datasources with the option <code>datasources</code>.
+                Each entry has a readable name and a fromName, optionally with fromWheres. The source from the
+                FROM clause is added automatically. Name it by adding an entry with the same fromName, as done
+                here with "Station north".</p>
+            <p>With <code>showSidebar: true</code> the sidebar (cog icon in the upper right corner) offers the
+                datasources for choice. Choosing one removes the shown datasets and loads the datasets of the
+                choosen source. The plugins of the component are loaded again, so results for the old data
+                (like the columns of the DatasetAnalysis plugin) are removed.</p>
+
+            <div id="present_example17" swa="Present FROM ../../../data/visualisation/present/example17/station_north.json TEMPLATE table_for_all_datasets"></div>
+
+            <h4>Switch by code</h4>
+            <p>Pages can switch the datasource without the sidebar, for example from their own select box.
+                The component fires <code>swac_present_example17_datasource_switched</code> when the new data is loaded.</p>
+            <pre><code>let comp = document.querySelector('#present_example17').swac_comp;
+comp.getDatasources();                  // [{name, fromName, fromWheres}, ...]
+comp.switchDatasource('Station south'); // returns a Promise</code></pre>
+
+            <fieldset>
+                <legend>VIEW-Requestor</legend>
+                <div id="present_example17_html" swa="Coder FROM #present_example17"></div>
+            </fieldset>
+            <fieldset>
+                <legend>CONFIGURATION</legend>
+                <div id="present_example17_conf" swa="Coder FROM ../../../js/visualisation/present/example17.js"></div>
+            </fieldset>
+            <fieldset>
+                <legend>DATASOURCE Station north</legend>
+                <div id="present_example17_north" swa="Coder FROM ../../../data/visualisation/present/example17/station_north.json"></div>
+            </fieldset>
+            <fieldset>
+                <legend>DATASOURCE Station south</legend>
+                <div id="present_example17_south" swa="Coder FROM ../../../data/visualisation/present/example17/station_south.json"></div>
+            </fieldset>
+        </article>
+        <footer>
+            <a href="../../about/privacy.html">Privacy policy / Datenschutzerklärung</a>
+            <a href="../../sites/about/imprint.html">Imprint / Impressum</a>
+            <a class="toplink" href="#">Top</a>
+        </footer>
+    </body>
+</html>
