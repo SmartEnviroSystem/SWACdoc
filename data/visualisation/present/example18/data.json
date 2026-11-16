@@ -1,10 +1,10 @@
 {
     "records": [
-        {"id": 1, "name": "Import data", "description": "Start of the import chain"},
-        {"id": 2, "name": "Validate data", "description": "Follows the import"},
-        {"id": 3, "name": "Create report", "description": "Follows validation"},
-        {"id": 4, "name": "Clean temporary files", "description": "Independent job"},
-        {"id": 5, "name": "Collect measurements", "description": "Start of another chain"},
-        {"id": 6, "name": "Archive measurements", "description": "Follows collection"}
+        {"id": 1, "name": "Parent A", "description": "First group", "highlighted": false},
+        {"id": 2, "name": "Child A.1", "description": "Child of entry 1", "highlighted": true},
+        {"id": 3, "name": "Child A.1.1", "description": "Child of entry 2", "highlighted": false},
+        {"id": 4, "name": "Independent entry", "description": "Entry without a parent", "highlighted": false},
+        {"id": 5, "name": "Parent B", "description": "Second group", "highlighted": false},
+        {"id": 6, "name": "Child B.1", "description": "Child of entry 5", "highlighted": false}
     ]
 }
