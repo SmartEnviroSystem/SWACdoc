@@ -1,0 +1,9 @@
+{
+    "attributes": [
+        {"name": "id", "type": "int8"},
+        {"name": "ts", "type": "timestamp"},
+        {"name": "temperature", "type": "float8"},
+        {"name": "humidity", "type": "float8"},
+        {"name": "comment", "type": "varchar"}
+    ]
+}

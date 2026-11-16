@@ -39,6 +39,7 @@
 {"id": 68, "rfrom": "*", "rto": "input/comments/index.html", "name": "Comments", "parent": 60},
 {"id": 69, "rfrom": "*", "rto": "input/labeling/index.html", "name": "Labeling", "parent": 60},
 {"id": 70, "rfrom": "*", "rto": "input/jsonreader/index.html", "name": "JsonReader", "parent": 60},
+{"id": 71, "rfrom": "*", "rto": "input/dataselect/index.html", "name": "Dataselect", "parent": 60},
 
 {"id": 80, "rfrom": "*", "rto": "#", "name": "Userinterface Components:"},
 {"id": 81, "rfrom": "*", "rto": "userinterface/navigation/index.html", "name": "Navigation", "parent": 80},
