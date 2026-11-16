@@ -27,6 +27,7 @@
 {"id": 31, "rfrom": "*", "rto": "visualisation/devicestates/index.html", "name": "Devicestates", "parent": 20},
 {"id": 32, "rfrom": "*", "rto": "visualisation/events/index.html", "name": "Events", "parent": 20},
 {"id": 33, "rfrom": "*", "rto": "visualisation/calculate/index.html", "name": "Calculate", "parent": 20},
+{"id": 34, "rfrom": "*", "rto": "visualisation/heatmap/index.html", "name": "Heatmap", "parent": 20},
 
 {"id": 60, "rfrom": "*", "rto": "#", "name": "Input Components:"},
 {"id": 61, "rfrom": "*", "rto": "input/form/index.html", "name": "Form", "parent": 60},
