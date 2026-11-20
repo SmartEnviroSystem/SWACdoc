@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>SWAC - dataselect - Example 1: Select dataset and attribute</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../files/icons/32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../files/icons/16x16.png">
+        <link rel="stylesheet" type="text/css" href="../../../css/global.css">
+
+        <link rel="stylesheet" type="text/css" href="/SWAC/swac/libs/uikit/css/uikit.min.css">
+        <script src="/SWAC/swac/libs/uikit/js/uikit.min.js"></script>
+        <script src="/SWAC/swac/swac.js" type="module"></script>
+    </head>
+    <body>
+        <header id="head_navigation" swa="Navigation FROM routes.json"></header>
+        <article>
+            <h1>Example 1: Select dataset and attribute</h1>
+            <p>Shows the datasets and the attributes of the selected datasets collection.
+                The weather station has a ts attribute, the power meter not, so the time attribute
+                has to be selected there.</p>
+            <div id="dataselect_example1" swa="Dataselect FROM ../../../data/input/dataselect/devices.json"></div>
+
+            <fieldset>
+                <legend>VIEW-Requestor</legend>
+                <pre><code class="lang-html">
+            &lt;div id="dataselect_example1" swa="Dataselect FROM ../../../data/input/dataselect/devices.json"&gt;&lt;/div&gt;
+                    </code></pre>
+            </fieldset>
+            <fieldset>
+                <legend>DATASOURCE</legend>
+                <p>Datasets (devices.json):</p>
+                <div id="dataselect_example1_data" swa="Coder FROM ../../../data/input/dataselect/devices.json"></div>
+                <p>Definition of the weather station collection (weatherstation/definition.json):</p>
+                <div id="dataselect_example1_def1" swa="Coder FROM ../../../data/input/dataselect/weatherstation/definition.json"></div>
+                <p>Definition of the power meter collection (powermeter/definition.json):</p>
+                <div id="dataselect_example1_def2" swa="Coder FROM ../../../data/input/dataselect/powermeter/definition.json"></div>
+            </fieldset>
+        </article>
+        <footer>
+            <a href="../../about/privacy.html">Privacy policy / Datenschutzerklärung</a>
+            <a href="../../about/imprint.html">Imprint / Impressum</a>
+            <a class="toplink" href="#">Top</a>
+        </footer>
+    </body>
+</html>

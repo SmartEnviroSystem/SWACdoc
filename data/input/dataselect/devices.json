@@ -1,0 +1,11 @@
+[
+    {
+        "id": 1,
+        "name": "Weather station",
+        "data_collection": "../../../data/input/dataselect/weatherstation/data.json"
+    }, {
+        "id": 2,
+        "name": "Power meter",
+        "data_collection": "../../../data/input/dataselect/powermeter/data.json"
+    }
+]

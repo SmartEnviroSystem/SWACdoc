@@ -1,0 +1,8 @@
+{
+    "attributes": [
+        {"name": "id", "type": "int8"},
+        {"name": "measured_at", "type": "timestamp"},
+        {"name": "power", "type": "float8"},
+        {"name": "status", "type": "varchar"}
+    ]
+}
