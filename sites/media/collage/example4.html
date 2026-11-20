@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>SWAC - collage: Example 4: Try options</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../files/icons/32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../files/icons/16x16.png">
+        <link rel="stylesheet" type="text/css" href="../../../css/global.css">
+
+        <link rel="stylesheet" type="text/css" href="/SWAC/swac/libs/uikit/css/uikit.min.css">
+        <script src="/SWAC/swac/libs/uikit/js/uikit.min.js"></script>
+        <script src="/SWAC/swac/libs/uikit/js/uikit-icons.min.js"></script>
+        <script src="/SWAC/swac/swac.js" type="module"></script>
+    </head>
+    <body>
+        <header id="head_navigation" swa="Navigation FROM routes.json"></header>
+        <article>
+            <h1>Example 4: Try options</h1>
+            <p>Choose a datasource and options and press Apply. Empty fields use the default value.
+                <br>The options are given to the component as URL parameters with the id of the
+                requestor as prefix, e.g. <a href="?collage_example4_pageSize=6">?collage_example4_pageSize=6</a>.
+                This works for every SWAC component.
+                <br>The datasource SmartDataHELIOS needs the database like in example 3.</p>
+            <form id="collage_example4_form" class="uk-grid-small uk-child-width-1-3@m uk-margin" uk-grid>
+                <div>
+                    <label class="uk-form-label" for="collage_example4_source">Datasource</label>
+                    <select id="collage_example4_source" name="source" class="uk-select uk-form-small">
+                        <option value="file">Example file with timestamps (201 images)</option>
+                        <option value="nots">Example file without timestamps (60 images)</option>
+                        <option value="smartdata">SmartDataHELIOS unimunic_asi (1200 images)</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="uk-form-label" for="collage_example4_mode">mode</label>
+                    <select id="collage_example4_mode" name="collage_example4_mode" class="uk-select uk-form-small">
+                        <option value="">default (auto)</option>
+                        <option value="auto">auto</option>
+                        <option value="timeline">timeline</option>
+                        <option value="keogram_columns">keogram_columns</option>
+                        <option value="keogram_rows">keogram_rows</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="uk-form-label" for="collage_example4_pageSize">pageSize</label>
+                    <input id="collage_example4_pageSize" name="collage_example4_pageSize" class="uk-input uk-form-small" type="number" min="1" placeholder="size from WHERE or 20">
+                </div>
+                <div>
+                    <label class="uk-form-label" for="collage_example4_jumpSeconds">jumpSeconds</label>
+                    <input id="collage_example4_jumpSeconds" name="collage_example4_jumpSeconds" class="uk-input uk-form-small" type="number" min="1" placeholder="3600">
+                </div>
+                <div>
+                    <label class="uk-form-label" for="collage_example4_jumpImages">jumpImages</label>
+                    <input id="collage_example4_jumpImages" name="collage_example4_jumpImages" class="uk-input uk-form-small" type="number" min="1" placeholder="10">
+                </div>
+                <div>
+                    <label class="uk-form-label" for="collage_example4_playInterval">playInterval (ms)</label>
+                    <input id="collage_example4_playInterval" name="collage_example4_playInterval" class="uk-input uk-form-small" type="number" min="50" placeholder="500">
+                </div>
+                <div>
+                    <button class="uk-button uk-button-primary uk-button-small">Apply</button>
+                    <a class="uk-button uk-button-default uk-button-small" href="example4.html">Reset</a>
+                </div>
+            </form>
+            <div id="collage_example4" swa="Collage"></div>
+
+            <fieldset>
+                <legend>CODE</legend>
+                <p>Code for the chosen configuration:</p>
+                <pre><code id="collage_example4_code" class="lang-html"></code></pre>
+            </fieldset>
+            <fieldset>
+                <legend>CONFIGURATION</legend>
+                <p>Script that builds this example from the form values:</p>
+                <div id="collage_example4_config" swa="Coder FROM ../../../js/media/collage/example4.js"></div>
+            </fieldset>
+            <script src="../../../js/media/collage/example4.js"></script>
+        </article>
+        <footer>
+            <a href="../../about/privacy.html">Privacy policy / Datenschutzerklärung</a>
+            <a href="../../about/imprint.html">Imprint / Impressum</a>
+            <a class="toplink" href="#">Top</a>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>SWAC - collage: Example 5: Keogram from SmartData</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../files/icons/32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../files/icons/16x16.png">
+        <link rel="stylesheet" type="text/css" href="../../../css/global.css">
+
+        <link rel="stylesheet" type="text/css" href="/SWAC/swac/libs/uikit/css/uikit.min.css">
+        <script src="/SWAC/swac/libs/uikit/js/uikit.min.js"></script>
+        <script src="/SWAC/swac/libs/uikit/js/uikit-icons.min.js"></script>
+        <script src="/SWAC/swac/swac.js" type="module"></script>
+
+        <script src="../../../js/media/collage/example5.js"></script>
+    </head>
+    <body>
+        <header id="head_navigation" swa="Navigation FROM routes.json"></header>
+        <article>
+            <h1>Example 5: Keogram from SmartData</h1>
+            <p>The SmartDataPorter stores a stripe of every image: keogram_column_png is the middle column
+                (north-south), keogram_line_png the middle row (east-west). The option keogramAttr names the
+                attribute with the stripe. The collage draws the stripes side by side by their timestamp,
+                so the keogram shows how the sky changed over time. Gaps in the data are shown hatched.
+                <br>The image of the selected dataset is shown in large, here from the server of the LMU
+                (option pathAttr), so an internet connection is needed.
+                <br>This example needs the database smartmonitoring_helios and SmartDataHELIOS like example 3.
+                If nothing appears after starting the database, reload the page with
+                <a href="?clearstates=true">clearstates=true</a>.</p>
+            <h2>Columns (north-south)</h2>
+            <div id="collage_example5" swa="Collage FROM /SmartDataHELIOS/smartdata/records/unimunic_asi WHERE storage=smartmonitoring AND order=ts,ASC AND size=1200 AND includes=id,ts,origin_url,keogram_column_png"></div>
+            <h2>Rows (east-west)</h2>
+            <div id="collage_example5_rows" swa="Collage FROM /SmartDataHELIOS/smartdata/records/unimunic_asi WHERE storage=smartmonitoring AND order=ts,ASC AND size=1200 AND includes=id,ts,origin_url,keogram_line_png"></div>
+
+            <fieldset>
+                <legend>VIEW-Requestor</legend>
+                <pre><code class="lang-html">
+&lt;div id="collage_example5" swa="Collage FROM /SmartDataHELIOS/smartdata/records/unimunic_asi WHERE storage=smartmonitoring AND order=ts,ASC AND size=1200 AND includes=id,ts,origin_url,keogram_column_png"&gt;&lt;/div&gt;
+&lt;div id="collage_example5_rows" swa="Collage FROM /SmartDataHELIOS/smartdata/records/unimunic_asi WHERE storage=smartmonitoring AND order=ts,ASC AND size=1200 AND includes=id,ts,origin_url,keogram_line_png"&gt;&lt;/div&gt;
+        </code></pre>
+            </fieldset>
+            <fieldset>
+                <legend>CONFIGURATION</legend>
+                <div id="collage_example5_config" swa="Coder FROM ../../../js/media/collage/example5.js"></div>
+            </fieldset>
+            <fieldset>
+                <legend>DATASOURCE</legend>
+                <p>Only the needed attributes are requested with includes, because the stripes are stored as base64 encoded PNG:</p>
+                <pre><code>/SmartDataHELIOS/smartdata/records/unimunic_asi?storage=smartmonitoring&amp;includes=id,ts,origin_url,keogram_column_png&amp;order=ts,asc&amp;size=1200</code></pre>
+            </fieldset>
+        </article>
+        <footer>
+            <a href="../../about/privacy.html">Privacy policy / Datenschutzerklärung</a>
+            <a href="../../about/imprint.html">Imprint / Impressum</a>
+            <a class="toplink" href="#">Top</a>
+        </footer>
+    </body>
+</html>
