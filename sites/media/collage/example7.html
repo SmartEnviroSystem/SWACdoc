@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>SWAC - collage: Example 7: Switch the datasource</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../files/icons/32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../files/icons/16x16.png">
+        <link rel="stylesheet" type="text/css" href="../../../css/global.css">
+
+        <link rel="stylesheet" type="text/css" href="/SWAC/swac/libs/uikit/css/uikit.min.css">
+        <script src="/SWAC/swac/libs/uikit/js/uikit.min.js"></script>
+        <script src="/SWAC/swac/libs/uikit/js/uikit-icons.min.js"></script>
+        <script src="/SWAC/swac/swac.js" type="module"></script>
+
+        <script src="../../../js/media/collage/example7.js"></script>
+    </head>
+    <body>
+        <header id="head_navigation" swa="Navigation FROM routes.json"></header>
+        <article>
+            <h1>Example 7: Switch the datasource</h1>
+            <p>With the option <code>datasources</code> the collage switches to the images of another datasource,
+                e.g. another camera, without reloading the page. Only the images of one datasource are shown at a time.
+                <br>With <code>showSidebar: true</code> the sidebar offers the datasources for choice
+                (cog icon in the upper right corner, visible when the mouse is over the collage).
+                After a switch timeline or keogram are built again, the display mode is detected again and the
+                jump buttons use jumpSeconds or jumpImages depending on the timestamps of the new images.
+                <br>Datasources without own <code>size</code> in their fromWheres show as many images as the first datasource.</p>
+            <div id="collage_example7" swa="Collage FROM ../../../data/media/collage/example1/skyimages.json WHERE order=ts,ASC AND size=12"></div>
+
+            <h4>Switch by code</h4>
+            <p>Pages can switch the datasource without the sidebar, for example from their own camera selection.
+                The component fires <code>swac_collage_example7_datasource_switched</code> when the new images are loaded.</p>
+            <pre><code>let comp = document.querySelector('#collage_example7').swac_comp;
+comp.getDatasources();                                 // [{name, fromName, fromWheres}, ...]
+comp.switchDatasource('Sky images without timestamp'); // returns a Promise</code></pre>
+
+            <fieldset>
+                <legend>VIEW-Requestor</legend>
+                <pre><code class="lang-html">
+&lt;div id="collage_example7" swa="Collage FROM ../../../data/media/collage/example1/skyimages.json WHERE order=ts,ASC AND size=12"&gt;&lt;/div&gt;
+        </code></pre>
+            </fieldset>
+            <fieldset>
+                <legend>CONFIGURATION</legend>
+                <div id="collage_example7_config" swa="Coder FROM ../../../js/media/collage/example7.js"></div>
+            </fieldset>
+            <p>The datasources are the files of <a href="example1.html">example 1</a> and <a href="example2.html">example 2</a>.
+                More about the option datasources on the page <a href="../../concepts/3_data.html">data concept</a>.</p>
+        </article>
+        <footer>
+            <a href="../../about/privacy.html">Privacy policy / Datenschutzerklärung</a>
+            <a href="../../about/imprint.html">Imprint / Impressum</a>
+            <a class="toplink" href="#">Top</a>
+        </footer>
+    </body>
+</html>
