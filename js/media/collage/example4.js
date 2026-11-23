@@ -7,17 +7,23 @@ const collage_example4_sources = {
     file: {
         from: '../../../data/media/collage/example1/skyimages.json',
         wheres: ['order=ts,ASC'],
-        options: {}
+        options: {},
+        hasTimestamp: true,
+        hint: '201 sky images with timestamp from a JSON file.'
     },
     nots: {
         from: '../../../data/media/collage/example2/skyimages.json',
         wheres: [],
-        options: {}
+        options: {},
+        hasTimestamp: false,
+        hint: '60 sky images without timestamp, ordered by their id.'
     },
     smartdata: {
         from: '/SmartDataHELIOS/smartdata/records/unimunic_asi',
         wheres: ['storage=smartmonitoring', 'order=ts,ASC', 'includes=id,ts,origin_url'],
-        options: {pathAttr: 'origin_url'}
+        options: {pathAttr: 'origin_url'},
+        hasTimestamp: true,
+        hint: '1200 sky images with timestamp from SmartDataHELIOS. Needs Payara and the database like example 3.'
     }
 };
 const collage_example4_optnames = ['mode', 'pageSize', 'jumpSeconds', 'jumpImages', 'playInterval'];
@@ -48,6 +54,21 @@ const collage_example4_optnames = ['mode', 'pageSize', 'jumpSeconds', 'jumpImage
         if (value)
             form.elements['collage_example4_' + curName].value = value;
     }
+
+    // Explain the datasource and switch off the jump field it does not use
+    function showSource(name) {
+        let curSource = collage_example4_sources[name];
+        document.getElementById('collage_example4_source_hint').textContent = curSource.hint;
+        form.elements['collage_example4_jumpSeconds'].disabled = !curSource.hasTimestamp;
+        document.getElementById('collage_example4_jumpSeconds_off').hidden = curSource.hasTimestamp;
+        form.elements['collage_example4_jumpImages'].disabled = curSource.hasTimestamp;
+        document.getElementById('collage_example4_jumpImages_off').hidden = !curSource.hasTimestamp;
+    }
+    showSource(sourceName);
+    form.elements['source'].addEventListener('change', function () {
+        showSource(form.elements['source'].value);
+    });
+
     // Leave empty fields out of the URL, so that the defaults are used
     form.addEventListener('submit', function () {
         for (let curElem of form.elements) {
@@ -57,10 +78,21 @@ const collage_example4_optnames = ['mode', 'pageSize', 'jumpSeconds', 'jumpImage
     });
 
     // Show the code for the chosen configuration
-    let optLines = Object.keys(shownOptions).map(name => '    ' + name + ': ' + JSON.stringify(shownOptions[name]).replaceAll('"', "'"));
-    document.getElementById('collage_example4_code').textContent =
+    let optLines = Object.keys(shownOptions).map(name => '        ' + name + ': ' + JSON.stringify(shownOptions[name]).replaceAll('"', "'"));
+    let codeElem = document.getElementById('collage_example4_code');
+    codeElem.textContent =
             '<div id="collage_example4" swa="' + swa + '"></div>\n\n'
             + '<script>\n'
-            + "window['collage_example4_options'] = {" + (optLines.length ? '\n' + optLines.join(',\n') + '\n' : '') + '};\n'
+            + (optLines.length ? '' : '    // All options use their default values\n')
+            + "    window['collage_example4_options'] = {" + (optLines.length ? '\n' + optLines.join(',\n') + '\n    ' : '') + '};\n'
             + '</script>';
+
+    // Highlight the code like the Coder component, as soon as it has loaded highlight.js
+    document.addEventListener('swac_collage_example4_script_loaded', function () {
+        if (window.hljs)
+            hljs.highlightElement(codeElem);
+    });
+    document.getElementById('collage_example4_copy').addEventListener('click', function () {
+        navigator.clipboard.writeText(codeElem.textContent);
+    });
 })();

@@ -1,0 +1,57 @@
+{
+    "records": [
+        {
+            "id": 1,
+            "name": "ASI-Station Bielefeld Mitte",
+            "latitude": 52.021,
+            "longitude": 8.535,
+            "irradiance": 810,
+            "cloudcover": 10,
+            "map_icon": "/SWAC/swac/components/Icon/imgs/time/day-sunrise.png"
+        },
+        {
+            "id": 2,
+            "name": "ASI-Station Gütersloh",
+            "latitude": 51.906,
+            "longitude": 8.383,
+            "irradiance": 520,
+            "cloudcover": 45,
+            "map_icon": "/SWAC/swac/components/Icon/imgs/time/day-sunrise.png"
+        },
+        {
+            "id": 3,
+            "name": "ASI-Station Herford",
+            "latitude": 52.114,
+            "longitude": 8.672,
+            "irradiance": 260,
+            "cloudcover": 85,
+            "map_icon": "/SWAC/swac/components/Icon/imgs/map/location_star.svg"
+        },
+        {
+            "id": 4,
+            "name": "ASI-Station Detmold",
+            "latitude": 51.937,
+            "longitude": 8.879,
+            "irradiance": 640,
+            "cloudcover": 30,
+            "map_areacolorattr": "cloudcover"
+        },
+        {
+            "id": 5,
+            "name": "ASI-Station Halle (Westf.)",
+            "latitude": 52.06,
+            "longitude": 8.361,
+            "irradiance": 150,
+            "cloudcover": 95,
+            "map_areacolorattr": "cloudcover"
+        },
+        {
+            "id": 6,
+            "name": "ASI-Station Bad Salzuflen",
+            "latitude": 52.087,
+            "longitude": 8.75,
+            "irradiance": 720,
+            "cloudcover": 15
+        }
+    ]
+}

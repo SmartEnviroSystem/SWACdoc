@@ -19,12 +19,13 @@
         <header id="head_navigation" swa="Navigation FROM routes.json"></header>
 
         <h3>Example 38: Color markers by a combination of multiple attributes</h3>
-        <p>With the option <code>colorCombination</code> the color is calculated from multiple attribute values.
+        <p>The color can be calculated from multiple attribute values. How this is done is described in the
+                datadescription with <code>ATTRIBUTENAME.combine</code>, so the colors and the rules are at one place.
                 Supported modes are <code>max</code> / <code>min</code> (color of the attribute with the highest / lowest level,
-                e.g. the worst pollutant), <code>avg</code> / <code>weighted</code> (average level, colored by the
-                description of <code>targetAttr</code>) and <code>custom</code> (own function).
-                In this example irradiance and cloud cover are combined into a photovoltaic suitability.
-                The user can still choose a single attribute with the ColorSelect plugin.</p>
+                e.g. the worst pollutant) and <code>avg</code> / <code>weighted</code> (average level, colored by the
+                values of the combined attribute). In this example irradiance and cloud cover are combined into the
+                attribute <code>pv_quality</code> (photovoltaic suitability), which is used like every other attribute
+                in the option <code>colorAttr</code> of the ColorSelect plugin. The user can still choose a single attribute.</p>
 
         <div id="worldmap2d_example38" swa="Worldmap2d FROM ../../../data/visualisation/worldmap2d/example36/helios_measurements.json"></div>
         <div id="worldmap2d_datadescription_example38" swa="Datadescription FROM ../../../data/visualisation/worldmap2d/example36/helios_datadescription.json"></div>
