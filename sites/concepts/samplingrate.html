@@ -1,0 +1,265 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>SWAC - Sampling-Rate Beispiel</title>
+
+    <link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet"
+          href="/SWAC/swac/libs/uikit/css/uikit.min.css">
+
+    <script src="/SWAC/swac/libs/uikit/js/uikit.min.js"></script>
+
+    <!-- SWAC laden -->
+    <script src="/SWAC/swac/swac.js" type="module"></script>
+
+    <!-- Automatische Berechnung aus JSON -->
+    <script type="module">
+
+        import Component from '/SWAC/swac/Component.js';
+
+        // Warten, bis SWAC seine ersten Komponenten geladen hat
+        const swacReady = new Promise(resolve => {
+            document.addEventListener(
+                'swac_components_complete',
+                resolve,
+                { once: true }
+            );
+        });
+
+        async function loadSamplingRate() {
+
+            const status = document.getElementById(
+                'samplingrate_status'
+            );
+
+            try {
+
+                // 1. JSON-Datei laden
+                const response = await fetch(
+                    './samplingrate-example.json'
+                );
+
+                if (!response.ok) {
+                    throw new Error(
+                        'JSON-Datei nicht gefunden: ' + response.status
+                    );
+                }
+
+                const json = await response.json();
+
+                // 2. Datensätze aus JSON lesen
+                // Unterstützt Arrays und einige Objektformate
+                let data = json;
+
+                if (!Array.isArray(data) && data &&
+                    typeof data === 'object') {
+
+                    if (Array.isArray(data.rows)) {
+                        data = data.rows;
+                    } else if (Array.isArray(data.data)) {
+                        data = data.data;
+                    } else if (Array.isArray(data.records)) {
+                        data = data.records;
+                    } else {
+                        const arrays = Object.values(data)
+                            .filter(Array.isArray);
+
+                        if (arrays.length === 1) {
+                            data = arrays[0];
+                        }
+                    }
+                }
+
+                if (!Array.isArray(data)) {
+                    throw new Error(
+                        'Unbekanntes JSON-Format. Ein Array mit Messdaten wird benötigt.'
+                    );
+                }
+
+                // 3. Bestehende Component.js verwenden
+                const component = new Component();
+
+                // 4. Sampling Rate automatisch berechnen
+                const sampling =
+                    component.calculateSamplingRateFromData(
+                        data,
+                        'ts'
+                    );
+
+                if (!sampling) {
+                    throw new Error(
+                        'Nicht genügend gültige Zeitstempel vorhanden.'
+                    );
+                }
+
+                // 5. Ergebnisse für SWAC Present vorbereiten
+                window.samplingrate_example = {
+                    id: 1,
+
+                    messintervall:
+                        sampling.intervalSeconds.toFixed(3),
+
+                    samplingrate_hz:
+                        sampling.perSecond.toFixed(5),
+
+                    messwerte_pro_stunde:
+                        sampling.perHour.toFixed(2),
+
+                    anzahl_messungen:
+                        sampling.measurements,
+
+                    doppelte_zeitstempel:
+                        sampling.duplicateTimestamps,
+
+                    ungueltige_zeitstempel:
+                        sampling.invalidTimestamps,
+
+                    moegliche_messluecken:
+                        sampling.possibleGaps
+                };
+
+                console.log(
+                    'Sampling Rate automatisch berechnet:',
+                    sampling
+                );
+
+                // 6. Warten, bis SWAC bereit ist
+                await swacReady;
+
+                // 7. Present-Komponente aktivieren
+                const present = document.getElementById(
+                    'samplingrate_present'
+                );
+
+                present.setAttribute(
+                    'swa',
+                    'Present FROM samplingrate_example'
+                );
+
+                // Nur unsere neue Komponente laden
+                await window.swac.detectRequestors(
+                    document.getElementById(
+                        'samplingrate_container'
+                    )
+                );
+
+                status.textContent =
+                    'Messdaten erfolgreich ausgewertet.';
+
+            } catch (error) {
+
+                console.error('Sampling-Rate Fehler:', error);
+
+                status.textContent =
+                    'Fehler: ' + error.message;
+            }
+        }
+
+        loadSamplingRate();
+
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Navigation bleibt erhalten -->
+    <header id="head_navigation"
+            swa="Navigation FROM routes.json">
+    </header>
+
+    <article class="uk-article">
+
+        <h1 class="uk-article-title">
+            Sampling-Rate Beispiel
+        </h1>
+
+        <p>
+            Dieses Beispiel berechnet die Sampling Rate
+            automatisch aus echten JSON-Messdaten.
+        </p>
+
+        <p>
+            Die Zeitabstände werden anhand der
+            Zeitstempel aus der Datenbank erkannt.
+        </p>
+
+        <h2>Berechnungsergebnis</h2>
+
+        <p id="samplingrate_status">
+            Messdaten werden geladen ...
+        </p>
+
+        <!-- SWAC Present-Komponente -->
+        <div id="samplingrate_container">
+
+            <div id="samplingrate_present">
+
+                <div class="swac_repeatForSet">
+
+                    <table class="uk-table
+                                  uk-table-divider
+                                  uk-table-striped">
+
+                        <thead>
+                            <tr>
+                                <th>Eigenschaft</th>
+                                <th>Ergebnis</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>Messintervall</td>
+                                <td>{messintervall} Sekunden</td>
+                            </tr>
+
+                            <tr>
+                                <td>Sampling Rate</td>
+                                <td>{samplingrate_hz} Hz</td>
+                            </tr>
+
+                            <tr>
+                                <td>Messungen pro Stunde</td>
+                                <td>{messwerte_pro_stunde}</td>
+                            </tr>
+
+                            <tr>
+                                <td>Anzahl Messungen</td>
+                                <td>{anzahl_messungen}</td>
+                            </tr>
+
+                            <tr>
+                                <td>Doppelte Zeitstempel</td>
+                                <td>{doppelte_zeitstempel}</td>
+                            </tr>
+
+                            <tr>
+                                <td>Ungültige Zeitstempel</td>
+                                <td>{ungueltige_zeitstempel}</td>
+                            </tr>
+
+                            <tr>
+                                <td>Mögliche Messlücken</td>
+                                <td>{moegliche_messluecken}</td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+            </div>
+        </div>
+
+    </article>
+
+</body>
+</html>
+
