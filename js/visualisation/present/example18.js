@@ -1,4 +1,5 @@
 window['present_example18_options'] = {
+    rowHover: true,
     plugins: new Map([
         ['TableHierarchy', {
             id: 'TableHierarchy',

@@ -30,6 +30,9 @@
                 Entry 2 has <code>highlighted: true</code>, so its group opens automatically and cannot be collapsed.
                 Uncheck the option to return to manual expansion. Call the plugin's <code>render()</code>
                 after external state changes.</p>
+            <p>Optional <code>rowHover: true</code> on Present shades the hovered row by 3%.
+                In expanded groups, the entire group is shaded by 3% and the hovered row by 6%.
+                Collapsed groups only highlight the parent row.</p>
             <label><input id="tablehierarchy_autoexpand" class="uk-checkbox" type="checkbox" checked disabled> Keep groups with highlighted entries expanded</label>
             <div id="present_example18" swa="Present FROM ../../../data/visualisation/present/example18/data.json TEMPLATE table_for_all_datasets"></div>
 
