@@ -17,63 +17,91 @@
         <header id="head_navigation" swa="Navigation FROM routes.json"></header>
         <article>
             <h1>Example 4: Try options</h1>
-            <p>Choose a datasource and options and press Apply. Empty fields use the default value.
-                <br>The options are given to the component as URL parameters with the id of the
-                requestor as prefix, e.g. <a href="?collage_example4_pageSize=6">?collage_example4_pageSize=6</a>.
-                This works for every SWAC component.
-                <br>The datasource SmartDataHELIOS needs the database like in example 3.</p>
-            <form id="collage_example4_form" class="uk-grid-small uk-child-width-1-3@m uk-margin" uk-grid>
-                <div>
-                    <label class="uk-form-label" for="collage_example4_source">Datasource</label>
-                    <select id="collage_example4_source" name="source" class="uk-select uk-form-small">
-                        <option value="file">Example file with timestamps (201 images)</option>
-                        <option value="nots">Example file without timestamps (60 images)</option>
-                        <option value="smartdata">SmartDataHELIOS unimunic_asi (1200 images)</option>
-                    </select>
+            <p>Change the values below and press <b>Apply</b> to see their effect on the collage.
+                Fields left empty use the default value. Under CONFIGURATION you find the code
+                for exactly this collage, ready to copy into your own page.</p>
+
+            <form id="collage_example4_form" class="uk-margin">
+                <div class="uk-grid-small uk-child-width-1-2@s uk-child-width-1-4@l" uk-grid>
+                    <div>
+                        <h4>Datasource</h4>
+                        <label class="uk-form-label" for="collage_example4_source">Images to show</label>
+                        <select id="collage_example4_source" name="source" class="uk-select uk-form-small">
+                            <option value="file">Example file with timestamps</option>
+                            <option value="nots">Example file without timestamps</option>
+                            <option value="smartdata">SmartDataHELIOS unimunic_asi</option>
+                        </select>
+                        <p id="collage_example4_source_hint" class="uk-text-meta uk-margin-small-top"></p>
+                    </div>
+                    <div>
+                        <h4>Display</h4>
+                        <label class="uk-form-label" for="collage_example4_mode">View <code>mode</code></label>
+                        <select id="collage_example4_mode" name="collage_example4_mode" class="uk-select uk-form-small">
+                            <option value="">Automatic (default)</option>
+                            <option value="timeline">Timeline</option>
+                            <option value="keogram_columns">Keogram north-south</option>
+                            <option value="keogram_rows">Keogram east-west</option>
+                        </select>
+                        <p class="uk-text-meta uk-margin-small-top">The timeline shows one image after the other.
+                            A keogram puts a stripe of every image side by side to show the whole time at once.
+                            Automatic chooses the timeline for normal images.</p>
+
+                        <label class="uk-form-label" for="collage_example4_pageSize">Images per page <code>pageSize</code></label>
+                        <input id="collage_example4_pageSize" name="collage_example4_pageSize" class="uk-input uk-form-small" type="number" min="1" placeholder="20">
+                        <p class="uk-text-meta uk-margin-small-top">How many images the timeline loads and shows at once. Default: 20.</p>
+                    </div>
+                    <div>
+                        <h4>Navigation</h4>
+                        <label class="uk-form-label" for="collage_example4_jumpSeconds">Jump in seconds <code>jumpSeconds</code></label>
+                        <input id="collage_example4_jumpSeconds" name="collage_example4_jumpSeconds" class="uk-input uk-form-small" type="number" min="1" placeholder="3600">
+                        <p class="uk-text-meta uk-margin-small-top">How far the jump buttons next to the images go.
+                            Only for images with timestamp. Default: 3600 (1 hour).
+                            <span id="collage_example4_jumpSeconds_off" class="uk-text-warning" hidden><br>Not used here, the images of this datasource have no timestamp.</span></p>
+
+                        <label class="uk-form-label" for="collage_example4_jumpImages">Jump in images <code>jumpImages</code></label>
+                        <input id="collage_example4_jumpImages" name="collage_example4_jumpImages" class="uk-input uk-form-small" type="number" min="1" placeholder="10">
+                        <p class="uk-text-meta uk-margin-small-top">How many images the jump buttons skip.
+                            Only for images without timestamp. Default: 10.
+                            <span id="collage_example4_jumpImages_off" class="uk-text-warning" hidden><br>Not used here, the images of this datasource have a timestamp.</span></p>
+                    </div>
+                    <div>
+                        <h4>Playback</h4>
+                        <label class="uk-form-label" for="collage_example4_playInterval">Time per image in ms <code>playInterval</code></label>
+                        <input id="collage_example4_playInterval" name="collage_example4_playInterval" class="uk-input uk-form-small" type="number" min="50" placeholder="500">
+                        <p class="uk-text-meta uk-margin-small-top">How long each image is shown when playing
+                            with the play button or the space key. Smaller is faster. Default: 500 (half a second).</p>
+                    </div>
                 </div>
-                <div>
-                    <label class="uk-form-label" for="collage_example4_mode">mode</label>
-                    <select id="collage_example4_mode" name="collage_example4_mode" class="uk-select uk-form-small">
-                        <option value="">default (auto)</option>
-                        <option value="auto">auto</option>
-                        <option value="timeline">timeline</option>
-                        <option value="keogram_columns">keogram_columns</option>
-                        <option value="keogram_rows">keogram_rows</option>
-                    </select>
-                </div>
-                <div>
-                    <label class="uk-form-label" for="collage_example4_pageSize">pageSize</label>
-                    <input id="collage_example4_pageSize" name="collage_example4_pageSize" class="uk-input uk-form-small" type="number" min="1" placeholder="size from WHERE or 20">
-                </div>
-                <div>
-                    <label class="uk-form-label" for="collage_example4_jumpSeconds">jumpSeconds</label>
-                    <input id="collage_example4_jumpSeconds" name="collage_example4_jumpSeconds" class="uk-input uk-form-small" type="number" min="1" placeholder="3600">
-                </div>
-                <div>
-                    <label class="uk-form-label" for="collage_example4_jumpImages">jumpImages</label>
-                    <input id="collage_example4_jumpImages" name="collage_example4_jumpImages" class="uk-input uk-form-small" type="number" min="1" placeholder="10">
-                </div>
-                <div>
-                    <label class="uk-form-label" for="collage_example4_playInterval">playInterval (ms)</label>
-                    <input id="collage_example4_playInterval" name="collage_example4_playInterval" class="uk-input uk-form-small" type="number" min="50" placeholder="500">
-                </div>
-                <div>
+                <div class="uk-margin-small-top">
                     <button class="uk-button uk-button-primary uk-button-small">Apply</button>
                     <a class="uk-button uk-button-default uk-button-small" href="example4.html">Reset</a>
                 </div>
             </form>
+
             <div id="collage_example4" swa="Collage"></div>
 
             <fieldset>
-                <legend>CODE</legend>
-                <p>Code for the chosen configuration:</p>
-                <pre><code id="collage_example4_code" class="lang-html"></code></pre>
-            </fieldset>
-            <fieldset>
                 <legend>CONFIGURATION</legend>
-                <p>Script that builds this example from the form values:</p>
-                <div id="collage_example4_config" swa="Coder FROM ../../../js/media/collage/example4.js"></div>
+                <p>Code for the collage above. Only changed options are listed, all others use their default value.</p>
+                <span class="swac_coder_wrapper">
+                    <pre><code id="collage_example4_code" class="swac_coder_code language-html"></code></pre>
+                    <span id="collage_example4_copy" class="swac_coder_copy" title="Copy code">📋</span>
+                </span>
             </fieldset>
+
+            <ul uk-accordion>
+                <li>
+                    <a class="uk-accordion-title" href="#">How this page works (not needed to use the collage)</a>
+                    <div class="uk-accordion-content">
+                        <p>The form sends its values as URL parameters with the id of the requestor as prefix,
+                            e.g. <a href="?collage_example4_pageSize=6">?collage_example4_pageSize=6</a>.
+                            SWAC reads such parameters for every component and uses them as options.
+                            The following script reads the chosen datasource, builds the requestor and the code
+                            shown under CONFIGURATION.</p>
+                        <div id="collage_example4_script" swa="Coder FROM ../../../js/media/collage/example4.js"></div>
+                    </div>
+                </li>
+            </ul>
             <script src="../../../js/media/collage/example4.js"></script>
         </article>
         <footer>
