@@ -56,6 +56,21 @@
             <p>This example shows how to get notified about changes and how to read the selection.
                 It also preselects a dataset from the URL parameter oo_id.</p>
             <a href="example4.html?oo_id=2" target="_blank">Show working example</a>
+
+            <h3>Share the selection as link</h3>
+            <p>Dataselect keeps the URL up to date with the selection, without reloading the page. Besides
+                the dataset (parameter oo_id, see option urlParam) it reads and writes the parameters attribute,
+                start and end (format 2026-11-25T00:00). Unknown datasets and attributes are ignored, an invalid
+                date keeps the preset period. With urlParam null nothing is read or written.</p>
+            <pre><code class="lang-html">
+anomalies.html?oo_id=9&amp;attribute=temperature&amp;start=2026-10-26T00:00&amp;end=2026-11-25T00:00
+            </code></pre>
+
+            <h3>Example 5: Select several datasets</h3>
+            <p>With the option multiple several datasets can be selected with checkboxes in a dropdown. Only attributes that all their
+                collections have are offered. The selection delivers all datasets in sets, each with a filter for
+                collections several datasets share (option filterAttribute). The URL holds the ids separated by commas.</p>
+            <a href="example5.html" target="_blank">Show working example</a>
         </article>
         <footer>
             <a href="../../about/privacy.html">Privacy policy / Datenschutzerklärung</a>

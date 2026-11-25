@@ -7,5 +7,9 @@
         "id": 2,
         "name": "Power meter",
         "data_collection": "../../../data/input/dataselect/powermeter/data.json"
+    }, {
+        "id": 3,
+        "name": "Weather station 2",
+        "data_collection": "../../../data/input/dataselect/weatherstation2/data.json"
     }
 ]

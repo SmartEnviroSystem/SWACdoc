@@ -1,0 +1,9 @@
+{
+    "attributes": [
+        {"name": "id", "type": "int8"},
+        {"name": "ts", "type": "timestamp"},
+        {"name": "temperature", "type": "float8"},
+        {"name": "pressure", "type": "float8"},
+        {"name": "wind_speed", "type": "float8"}
+    ]
+}
