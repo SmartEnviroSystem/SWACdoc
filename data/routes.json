@@ -13,6 +13,8 @@
 {"id": 12, "rfrom": "*", "rto": "concepts/libraries.html", "name": "Libraries & License", "parent": 1},
 {"id": 13, "rfrom": "*", "rto": "concepts/legacybrowsers.html", "name": "Legacy browser support", "parent": 1},
 
+{"id": 14, "rfrom": "*", "rto": "concepts/samplingrate.html", "name": "Sampling-Rate", "parent": 1},
+
 {"id": 20, "rfrom": "*", "rto": "#", "name": "Visualisation Components:"},
 {"id": 21, "rfrom": "*", "rto": "visualisation/present/index.html", "name": "Present", "parent": 20},
 {"id": 22, "rfrom": "*", "rto": "visualisation/clock/index.html", "name": "Clock", "parent": 20},
